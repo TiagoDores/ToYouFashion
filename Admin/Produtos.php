@@ -19,35 +19,46 @@
     include("layoutSlidenav.php");
     ?>
     <div id="layoutSidenav_content">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="white_card position-relative mb_20 ">
-                    <div class="card-body">
-                        <div class="ribbon1 rib1-primary"><span class="text-white text-center rib1-primary">50%
-                                off</span></div>
-                        <img src="../img/product-1.jpg" alt="" class="d-block mx-auto my-4" width="60%">
-                        <div class="row my-4">
-                            <div class="col"><span class="badge_btn_3  mb-1">Life Style</span> <a href="#" class="f_w_400 color_text_3 f_s_14 d-block">Unique Blue Bag</a></div>
-                            <div class="col-auto">
-                                <h4 class="text-dark mt-0">$49.00 <small class="text-muted font-14"><del>$99.00</del></small></h4>
-                                <ul class="list-inline mb-0 product-review align-self-center">
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning font-16"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
-                                    </li>
-                                    <li class="list-inline-item"><i class="fas fa-star-half text-warning font-16 ml-n2"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button class="btn_2 btn-block">Add To Cart</button>
-                    </div>
 
+        <?php
+        include('../config.php');
+        $sql = "SELECT * FROM `produtos`";
+        $resultado = $conexao->query($sql);
+
+        if ($resultado->num_rows > 0) {
+            while ($a = $resultado->fetch_assoc()) {
+                echo '<div class="row">
+                <div class="col-md-3">
+                    <div class="white_card position-relative mb_20 ">
+                        <div class="card-body">
+                            <img src="../img/product-1.jpg" alt="" class="d-block mx-auto my-4" width="60%">
+                            <div class="row my-4">
+                                <div class="col"><span class="badge_btn_3  mb-1">' . $a['Designacao'] . '</span> <a href="#" class="f_w_400 color_text_3 f_s_14 d-block"></a></div>
+                                <div class="col-auto">
+                                    <h4 class="text-dark mt-0">' . $a['Preco'] . '</h4>
+                                    <ul class="list-inline mb-0 product-review align-self-center">
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
+                                        </li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
+                                        </li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
+                                        </li>
+                                        <li class="list-inline-item"><i class="fas fa-star-half text-warning font-16 ml-n2"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn_2 btn-block">Add To Cart</button>
+                        </div>
+    
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div>';
+            }
+        }
+        $conexao->close();
+        ?>
+        
 
         <?php
         include("Footer.php");
