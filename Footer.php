@@ -37,9 +37,9 @@
                                 <h4>Quick Links</h4>
                                 <ul>
                                     <li><a href="formAbout.php">Sobre Nós</a></li>
-                                    <li><a href="#"> Offers & Discounts</a></li>
-                                    <li><a href="#"> Get Coupon</a></li>
-                                    <li><a href="formContacto.php"> Contacta-nos</a></li>
+                                    <li><a href="#">Offers & Discounts</a></li>
+                                    <li><a href="#">Get Coupon</a></li>
+                                    <li><a href="formContacto.php">Contacta-nos</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -51,8 +51,8 @@
                                 <ul>
                                     <li><a href="#">Woman Cloth</a></li>
                                     <li><a href="#">Fashion Accessories</a></li>
-                                    <li><a href="#"> Man Accessories</a></li>
-                                    <li><a href="#"> Rubber made Toys</a></li>
+                                    <li><a href="#">Man Accessories</a></li>
+                                    <li><a href="#">Rubber made Toys</a></li>
                                 </ul>
                             </div>
                         </div>

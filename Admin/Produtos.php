@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Charts - SB Admin</title>
+    <title>Dashboard - Admin</title>
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -19,46 +19,71 @@
     include("layoutSlidenav.php");
     ?>
     <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Produtos</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Lista de Produtos</li>
+                </ol>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-user me-1"></i>
+                        Lista de Produtos
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                    <th>IdProduto</th>
+                                    <th>Nome</th>
+                                    <th>Categoria</th>
+                                    <th>Tamanhos</th>
+                                    <th>Preço</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>IdProduto</th>
+                                    <th>Nome</th>
+                                    <th>Categoria</th>
+                                    <th>Tamanhos</th>
+                                    <th>Preço</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <?php
+                                include('../config.php');
+                                $sql = "SELECT * FROM `produtos`";
+                                $resultado = $conexao->query($sql);
 
-        <?php
-        include('../config.php');
-        $sql = "SELECT * FROM `produtos`";
-        $resultado = $conexao->query($sql);
-
-        if ($resultado->num_rows > 0) {
-            while ($a = $resultado->fetch_assoc()) {
-                echo '<div class="row">
-                <div class="col-md-3">
-                    <div class="white_card position-relative mb_20 ">
-                        <div class="card-body">
-                            <img src="../img/product-1.jpg" alt="" class="d-block mx-auto my-4" width="60%">
-                            <div class="row my-4">
-                                <div class="col"><span class="badge_btn_3  mb-1">' . $a['Nome'] . '</span> <a href="#" class="f_w_400 color_text_3 f_s_14 d-block"></a></div>
-                                <div class="col-auto">
-                                    <h4 class="text-dark mt-0">' . $a['Preco'] . '</h4>
-                                    <ul class="list-inline mb-0 product-review align-self-center">
-                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16"></i></li>
-                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="fas fa-star text-warning font-16 ml-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="fas fa-star-half text-warning font-16 ml-n2"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <button class="btn_2 btn-block">Adicionar ao Carrinho</button>
-                        </div>
-    
+                                if ($resultado->num_rows > 0) {
+                                    while ($a = $resultado->fetch_assoc()) {
+                                        echo '<tr>
+                                            <td>' . $a['IdCliente'] . '</td>
+                                            <td>' . $a['Nome'] . '</td>
+                                            <td>' . $a['Morada'] . '</td>
+                                            <td>' . $a['Codigopostal'] . '</td>
+                                            <td>' . $a['Pais'] . '</td>
+                                            <td>' . $a['Telefone'] . '</td>
+                                            <td>' . $a['Email'] . '</td>
+                                            <td>' . $a['Password'] . '</td>
+                                            <td>' . $a['NIF'] . '</td>
+                                            <td> <a class="btn btn-info" href="formEditarUtilizador.php?id=' . $a['IdCliente'] . '"><i class="fas fa-pen"></i></a></td>
+                                            <td> <a onclick=\'return confirm("Tem a certeza que deseja eliminar o registo?")\'
+                                            class="btn btn-danger" href="eliminarUser.php?id=' . $a['IdCliente'] . '"><i class="fas fa-trash"></i></a></td>
+                                        </tr>';
+                                    }
+                                }
+                                $conexao->close();
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div>';
-            }
-        }
-        $conexao->close();
-        ?>
-        
+            </div>
+        </main>
+
 
         <?php
         include("Footer.php");
