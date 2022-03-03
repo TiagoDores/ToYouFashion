@@ -33,7 +33,7 @@
                         <div class="card-body">
                             <img src="../img/product-1.jpg" alt="" class="d-block mx-auto my-4" width="60%">
                             <div class="row my-4">
-                                <div class="col"><span class="badge_btn_3  mb-1">' . $a['Designacao'] . '</span> <a href="#" class="f_w_400 color_text_3 f_s_14 d-block"></a></div>
+                                <div class="col"><span class="badge_btn_3  mb-1">' . $a['Nome'] . '</span> <a href="#" class="f_w_400 color_text_3 f_s_14 d-block"></a></div>
                                 <div class="col-auto">
                                     <h4 class="text-dark mt-0">' . $a['Preco'] . '</h4>
                                     <ul class="list-inline mb-0 product-review align-self-center">
@@ -48,7 +48,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <button class="btn_2 btn-block">Add To Cart</button>
+                            <button class="btn_2 btn-block">Adicionar ao Carrinho</button>
                         </div>
     
                     </div>
