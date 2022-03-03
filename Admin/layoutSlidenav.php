@@ -97,7 +97,7 @@
                         </a>
 
                         <a class="nav-link" href="Encomendas.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-shirt"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-box-open"></i></div>
                             Encomendas
                         </a>
                     </div>

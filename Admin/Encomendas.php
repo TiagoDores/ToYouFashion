@@ -29,7 +29,7 @@
                 </ol>
                 <div class="card mb-4">
                     <div class="card-header">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-box-open"></i>
                         Encomendas
                     </div>
                     <div class="card-body">
