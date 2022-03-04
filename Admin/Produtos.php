@@ -63,6 +63,7 @@
                                             <td>' . $a['Nome'] . '</td>
                                             <td>' . $a['Categoria'] . '</td>
                                             <td>' . $a['Preco'] . '</td>
+                                            <td> <a class="btn btn-success me-2" href="formEditarUtilizador.php?id=' . $a['IdProduto'] . '"><i class="fas fa-magnifying-glass"></i></a></td>
                                             <td> <a class="btn btn-info" href="formEditarUtilizador.php?id=' . $a['IdProduto'] . '"><i class="fas fa-pen"></i></a></td>
                                             <td> <a onclick=\'return confirm("Tem a certeza que deseja eliminar o Produto?")\'
                                             class="btn btn-danger" href="eliminarUser.php?id=' . $a['IdProduto'] . '"><i class="fas fa-trash"></i></a></td>
