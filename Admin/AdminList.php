@@ -27,6 +27,13 @@
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
                     <li class="breadcrumb-item active">Lista de Admins</li>
                 </ol>
+                <div class="mt-5 mb-4">
+                    <form action="formRegistar.php">
+                        <button type="submit" value="submit" class="btn btn-primary">
+                            <a><i class="fas fa-plus"></i> Adicionar Novo Admin</a>
+                        </button>
+                    </form>
+                </div>
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-user me-1"></i>

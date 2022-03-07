@@ -28,7 +28,7 @@
                     <li class="breadcrumb-item active">Produtos</li>
                 </ol>
                 <div class="mt-5 mb-4">
-                    <form action="">
+                    <form action="formInserirProduto.php">
                         <button type="submit" value="submit" class="btn btn-primary">
                             <a><i class="fas fa-plus"></i> Adicionar Novo Produto</a>
                         </button>
