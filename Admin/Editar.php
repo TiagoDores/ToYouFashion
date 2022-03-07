@@ -29,6 +29,7 @@
     }else {
         $msg="Erro ao Editar";
     }
+
     header("location:UsersList.php?msg=$msg");
     $conexao->close();
 ?>

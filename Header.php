@@ -17,7 +17,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.php"><img src="assets/img/logo/logo.png" alt="" width="25%"></a>
+                            <a href="index.php"><img src="img/logo/logo.png" alt="" width="25%"></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">

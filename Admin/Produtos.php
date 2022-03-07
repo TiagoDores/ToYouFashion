@@ -9,7 +9,7 @@
     <meta name="author" content="" />
     <title>Tables - SB Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,6 +27,13 @@
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
                     <li class="breadcrumb-item active">Produtos</li>
                 </ol>
+                <div class="mt-5 mb-4">
+                    <form action="">
+                        <button type="submit" value="submit" class="btn btn-primary">
+                            <a><i class="fas fa-plus"></i> Adicionar Novo Produto</a>
+                        </button>
+                    </form>
+                </div>
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-user"></i>
@@ -84,9 +91,9 @@
     </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+    <script src="assets/js/datatables-simple-demo.js"></script>
 </body>
 
 </html>

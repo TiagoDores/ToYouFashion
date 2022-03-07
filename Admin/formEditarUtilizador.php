@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Register - SB Admin</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,7 +26,7 @@
         $resultado = $conexao->query($sql);
 
         if ($resultado->num_rows > 0) {
-            $modulo = $resultado->fetch_assoc();
+            $cliente = $resultado->fetch_assoc();
         }
 
         $conexao->close();
@@ -42,7 +42,7 @@
                                     <h3 class="text-center font-weight-light my-4">Editar Dados da Conta</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form class="row contact_form" action="../Editar.php?id=<?=$id?>" method="post" novalidate="novalidate">
+                                    <form class="row contact_form" action="Editar.php?id=<?=$id?>" method="post" novalidate="novalidate">
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
@@ -122,7 +122,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
