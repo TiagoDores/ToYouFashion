@@ -25,20 +25,8 @@
 </head>
 
 <body>
-    <!--? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="img/logo/logo.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
-
     <?php
+    include("Preloader.php");
     include("Header.php");
     ?>
 
@@ -384,14 +372,14 @@
                             <span class="contact-info__icon"><i class="ti-facebook"></i></span>
                             <div class="media-body">
                                 <h3>Facebook/ToYouFashion</h3>
-                                <p>Send us your query anytime!</p>
+
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
                                 <h3>toyoufashion@gmail.com</h3>
-                                <p>Envie-nos a sua consulta a qualquer momento!</p>
+
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@
                                     <h3 class="text-center font-weight-light my-4">Criar Conta</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form class="row contact_form" action="inserirProduto.php" method="post" novalidate="novalidate">
+                                    <form class="row contact_form" action="inserirProduto.php" method="post" novalidate="novalidate" enctype="multipart/form-data">
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
@@ -58,7 +58,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label" for="imagemproduto">Anexar Imagens:</label>
-                                            <input class="form-control" type="file" name="imagemproduto" required>
+                                            <input class="form-control" type="file" name="imagemproduto" multiple required>
                                         </div>
                                         <div class="mt-4 mb-0">
                                             <button type="submit" value="submit" class="btn btn-primary">

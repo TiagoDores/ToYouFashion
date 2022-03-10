@@ -26,6 +26,7 @@
 <body>
 
     <?php
+    include("Preloader.php");
     include("Header.php");
     ?>
 

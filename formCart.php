@@ -25,7 +25,8 @@
 
 <body>
   <?php
-  include('Header.php');
+  include("Preloader.php");
+  include("Header.php");
   ?>
   <main>
     <!-- Hero Area Start-->
