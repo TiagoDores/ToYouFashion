@@ -15,8 +15,6 @@
         $conta = $resultado->fetch_assoc();
         session_start();
         $_SESSION['user'] = $conta['Nome'];
-        
-        //echo($conta['Admin']);
 
         if ($conta['Admin'] == 1) {
             header("location:Admin/index.php");

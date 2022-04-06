@@ -92,7 +92,7 @@
                         </div>
 
                         <a class="nav-link" href="Produtos.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-shirt"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-cart-plus"></i></div>
                             Produtos
                         </a>
 
