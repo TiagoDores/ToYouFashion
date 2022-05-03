@@ -30,6 +30,7 @@
                                         <ul class="submenu">
                                             <li><a href="formlogin.php">Login</a></li>
                                             <li><a href="formCart.php">Carrinho</a></li>
+                                            <li><a href="formProduct_details.php">Detalhes produtos</a></li>
                                             <li><a href="formConfirmation.php">Confirmation</a></li>
                                             <li><a href="formCheckout.php">Product Checkout</a></li>
                                         </ul>

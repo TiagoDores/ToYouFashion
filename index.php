@@ -1,7 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>To You Fashion</title>
     <link rel="icon" href="img/logo/icon.png" type="image/png">
@@ -24,8 +25,8 @@
 
 <body>
     <?php
-        include('Preloader.php');
-        include('Header.php');
+    include('Preloader.php');
+    include('Header.php');
     ?>
 
     <main>
@@ -36,7 +37,7 @@
                 <div class="single-slider slider-height d-flex align-items-center slide-bg">
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
-                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Selecione seu novo estilo perfeito</h1>
                                     <!-- Hero-btn -->
@@ -45,9 +46,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="assets/img/hero/watch.png" alt="" class=" heartbeat">
+                                    <img src="img/gallery/Malas.png" width="220%" alt="" class=" heartbeat">
                                 </div>
                             </div>
                         </div>
@@ -57,9 +58,9 @@
                 <div class="single-slider slider-height d-flex align-items-center slide-bg">
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
-                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your New Perfect Style</h1>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Selecione seu novo estilo perfeito</h1>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="Loja.html" class="btn hero-btn">Compra Já</a>
@@ -89,39 +90,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center" >
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product1.png" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product2.png" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product3.png" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        /*include('../config.php');
+                        $sql = "SELECT * FROM `produtos`";
+                        $resultado = $conexao->query($sql);
+
+                        if ($resultado->num_rows > 0) {
+                            while ($a = $resultado->fetch_assoc()) {
+                                echo '<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="single-new-pro mb-30 text-center">
+                                                <div class="product-img">
+                                                    <img src="'.$a['CaminhoImagem'].'" alt="">
+                                                </div>
+                                                <div class="product-caption">
+                                                    <h3><a href="product_details.html">'.$a['Nome'].'</a></h3>
+                                                    <span>'.$a['Preco'].' €</span>
+                                                </div>
+                                            </div>
+                                        </div>';
+                            }
+                        }
+                        $conexao->close();*/
+                    ?>
                 </div>
             </div>
         </section>
@@ -289,9 +279,9 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
-                    <div class="video-wrap">
-                        <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
-                    </div>
+                        <div class="video-wrap">
+                            <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
+                        </div>
                     </div>
                 </div>
                 <!-- Arrow -->
@@ -356,7 +346,7 @@
                                 <h6>Secure Payment System</h6>
                                 <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
                             </div>
-                        </div> 
+                        </div>
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single-method mb-40">
                                 <i class="ti-reload"></i>
@@ -370,9 +360,9 @@
         </div>
         <!-- Shop Method End-->
     </main>
-    
-    <?php 
-        include('Footer.php');
+
+    <?php
+    include('Footer.php');
     ?>
 
 
@@ -410,17 +400,18 @@
     <script src="./assets/js/jquery.scrollUp.min.js"></script>
     <script src="./assets/js/jquery.nice-select.min.js"></script>
     <script src="./assets/js/jquery.sticky.js"></script>
-    
+
     <!-- contact js -->
     <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/jquery.form.js"></script>
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
     <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+
 </body>
+
 </html>

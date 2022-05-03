@@ -3,9 +3,8 @@
     $to = "tiago.dores.td@gmail.com";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
-    $subject = $_REQUEST['assunto'];
-    $number = $_REQUEST['number'];
-    $message = $_REQUEST['message'];
+	$subject = "Contacto no site";
+	$message = $_POST['assunto'];
 
     $headers = "From: $from";
 	$headers = "From: " . $from . "\r\n";
