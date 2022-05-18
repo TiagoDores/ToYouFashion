@@ -5,7 +5,7 @@
     $password = md5($_POST['password']);
     
 
-    $sql = "SELECT * FROM `cliente` WHERE `Email` = '$email' AND `Password` ='$password'";
+    $sql = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` ='$password'";
     $resultado = $conexao->query($sql);
 
     //echo($sql);
@@ -14,9 +14,9 @@
     if ($resultado->num_rows >0) {
         $conta = $resultado->fetch_assoc();
         session_start();
-        $_SESSION['user'] = $conta['Nome'];
+        $_SESSION['user'] = $conta['name'];
 
-        if ($conta['Admin'] == 1) {
+        if ($conta['admin'] == 1) {
             header("location:Admin/index.php");
         } else{
             header("location:index.php");

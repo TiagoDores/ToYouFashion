@@ -57,18 +57,18 @@
                             <tbody>
                                 <?php
                                     include('../config.php');
-                                    $sql = "SELECT * FROM `encomendas`";
+                                    $sql = "SELECT * FROM `orders`";
                                     $resultado = $conexao->query($sql);
 
                                     if ($resultado->num_rows > 0) {
                                         while ($a = $resultado->fetch_assoc()) {
                                             echo '<tr>
-                                            <td>' . $a['IdEncomenda'] . '</td>
-                                            <td>' . $a['IdCliente'] . '</td>
-                                            <td>' . $a['EstadoEncomenda'] . '</td>
-                                            <td>' . $a['DataEncomenda'] . '</td>
-                                            <td>' . $a['NumeroProdutos'] . '</td>
-                                            <td>' . $a['ValorTotal'] . '</td>
+                                            <td>' . $a['id'] . '</td>
+                                            <td>' . $a['iduser'] . '</td>
+                                            <td>' . $a['orderstatus'] . '</td>
+                                            <td>' . $a['orderdate'] . '</td>
+                                            <td>' . $a['numberproducts'] . '</td>
+                                            <td>' . $a['amount'] . '</td>
                                         </tr>';
                                         }
                                     }

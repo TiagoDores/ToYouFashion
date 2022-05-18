@@ -57,17 +57,17 @@
                                     Por Favor Registe-se agora</h3>
                                 <form class="row " action="Registar.php" method="post" novalidate="novalidate">
                                     <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="nome" name="nome" value="" placeholder="Nome" required>
+                                        <input type="text" class="form-control" id="name" name="name" value="" placeholder="Nome" required>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group p_star">
-                                            <input type="text" class="form-control" id="morada" name="morada" value="" placeholder="Morada" required>
+                                            <input type="text" class="form-control" id="address" name="address" value="" placeholder="Morada" required>
                                         </div>
                                         <div class="form-group p_star">
-                                            <input type="text" class="form-control" id="codigopostal" name="codigopostal" value="" placeholder="Código Postal" required>
+                                            <input type="text" class="form-control" id="zipcode" name="zipcode" value="" placeholder="Código Postal" required>
                                         </div>
                                         <div class="form-group p_star">
-                                            <input type="text" class="form-control" id="pais" name="pais" value="" placeholder="Pais" required>
+                                            <input type="text" class="form-control" id="country" name="country" value="" placeholder="Pais" required>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -75,7 +75,7 @@
                                             <!--<select class="form-select">
 
                                             </select>-->
-                                            <input type="text" class="form-control" id="telemovel" name="telemovel" value="" placeholder="Telemóvel">
+                                            <input type="text" class="form-control" id="telephone" name="telephone" value="" placeholder="Telemóvel">
                                         </div>
                                         <div class="form-group p_star">
                                             <input type="text" class="form-control" id="nif" name="nif" value="" placeholder="NIF">

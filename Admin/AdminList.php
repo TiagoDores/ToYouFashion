@@ -60,19 +60,19 @@
                             <tbody>
                                 <?php
                                     include('../config.php');
-                                    $sql = "SELECT * FROM `cliente` WHERE `Admin` = '1'";
+                                    $sql = "SELECT * FROM `users` WHERE `admin` = '1'";
                                     $resultado = $conexao->query($sql);
 
                                     if ($resultado->num_rows > 0) {
                                         while ($a = $resultado->fetch_assoc()) {
                                             echo '<tr>
-                                            <td>' . $a['IdCliente'] . '</td>
-                                            <td>' . $a['Nome'] . '</td>
-                                            <td>' . $a['Email'] . '</td>
-                                            <td>' . $a['Password'] . '</td>
-                                            <td> <a class="btn btn-info" href="formEditarUtilizador.php?id=' . $a['IdCliente'] . '"><i class="fas fa-pen"></i></a></td>
+                                            <td>' . $a['id'] . '</td>
+                                            <td>' . $a['name'] . '</td>
+                                            <td>' . $a['email'] . '</td>
+                                            <td>' . $a['password'] . '</td>
+                                            <td> <a class="btn btn-info" href="formEditarUtilizador.php?id=' . $a['id'] . '"><i class="fas fa-pen"></i></a></td>
                                             <td> <a onclick=\'return confirm("Tem a certeza que deseja eliminar o registo?")\'
-                                            class="btn btn-danger" href="eliminarUser.php?id=' . $a['IdCliente'] . '"><i class="fas fa-trash"></i></a></td>
+                                            class="btn btn-danger" href="eliminarUser.php?id=' . $a['id'] . '"><i class="fas fa-trash"></i></a></td>
                                         </tr>';
                                         }
                                     }

@@ -1,11 +1,11 @@
 <?php
 
     include('config.php');
-    $nome= $_POST['nome'];
-    $morada= $_POST['morada'];
-    $codigopostal= $_POST['codigopostal'];
-    $pais= $_POST['pais'];
-    $telemovel= $_POST['telemovel'];
+    $name= $_POST['name'];
+    $address= $_POST['address'];
+    $zipcode= $_POST['zipcode'];
+    $country= $_POST['country'];
+    $telephone= $_POST['telephone'];
     $nif= $_POST['nif'];
     $email= $_POST['email'];
     $password= md5($_POST['password']);
@@ -13,8 +13,8 @@
 
     
 
-    $sql = "INSERT INTO `cliente`(`Nome`, `Email`, `Password`, `Telefone`, `Morada`, `Codigopostal`, `Pais`, `NIF`, `Admin`)
-    VALUES ('$nome', '$email', '$password', '$telemovel', '$morada', '$codigopostal', '$pais', '$nif', '$admin')";
+    $sql = "INSERT INTO `users`(`name`, `email`, `password`, `telephone`, `address`, `zipcode`, `country`, `nif`, `admin`)
+    VALUES ('$name', '$email', '$password', '$telephone', '$address', '$zipcode', '$country', '$nif', '$admin')";
 
     $resultado=$conexao->query($sql);
 

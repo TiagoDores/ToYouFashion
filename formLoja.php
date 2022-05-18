@@ -85,7 +85,7 @@
 
                             <?php
                             include('config.php');
-                            $sql = "SELECT * FROM produtos";
+                            $sql = "SELECT * FROM products";
                             $resultado = $conexao->query($sql);
 
                             if ($resultado->num_rows > 0) {
@@ -94,7 +94,7 @@
                                         <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
                                             <div class="single-popular-items mb-50 text-center">
                                                 <div class="popular-img">
-                                                    <img src="img/Produtos/' . $a['Imagem'] . '">
+                                                    <img src="img/Produtos/' . $a['image'] . '">
                                                     <div class="img-cap">
                                                         <span>Adicionar ao Carrinho</span>
                                                     </div>
@@ -103,8 +103,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="popular-caption">
-                                                    <h3><a href="formProduct_details.php?id=' . $a['IdProduto'] . '">' . $a['Nome'] . '</a></h3>
-                                                    <span>' . $a['Preco'] . ' €</span>
+                                                    <h3><a href="formProduct_details.php?id=' . $a['id'] . '">' . $a['name'] . '</a></h3>
+                                                    <span>' . $a['price'] . ' €</span>
                                                 </div>   
                                             </div>
                                         </div>';

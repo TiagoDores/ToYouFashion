@@ -28,28 +28,28 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input type="text" class="form-control" id="nome" name="nome" value="" placeholder="Nome" required>
-                                                    <label for="nome">Nome</label>
+                                                    <input type="text" class="form-control" id="name" name="name" value="" placeholder="Nome" required>
+                                                    <label for="name">Nome</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input type="text" class="form-control" id="morada" name="morada" value="" placeholder="Morada" required>
-                                                    <label for="morada">Morada</label>
+                                                    <input type="text" class="form-control" id="address" name="address" value="" placeholder="Morada" required>
+                                                    <label for="address">Morada</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input type="text" class="form-control" id="codigopostal" name="codigopostal" value="" placeholder="Código Postal" required>
-                                                    <label for="codigopostal">Codigo Postal</label>
+                                                    <input type="text" class="form-control" id="zipcode" name="zipcode" value="" placeholder="Código Postal" required>
+                                                    <label for="zipcode">Codigo Postal</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input type="text" class="form-control" id="telemovel" name="telemovel" value="" placeholder="Telemóvel">
-                                                    <label for="telemovel">Telemóvel</label>
+                                                    <input type="text" class="form-control" id="telephone" name="telephone" value="" placeholder="Telemóvel">
+                                                    <label for="telephone">Telemóvel</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -74,8 +74,8 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input type="text" class="form-control" id="pais" name="pais" value="" placeholder="Pais">
-                                                    <label for="pais">Pais</label>
+                                                    <input type="text" class="form-control" id="country" name="country" value="" placeholder="Pais">
+                                                    <label for="country">Pais</label>
                                                 </div>
                                             </div>
                                             <div class="form-check form-switch">

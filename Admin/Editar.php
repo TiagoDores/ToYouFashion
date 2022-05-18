@@ -1,10 +1,10 @@
 <?php
     include('../config.php');
 
-    $nome= $_POST['nome'];
-    $morada= $_POST['morada'];
-    $codigopostal= $_POST['codigopostal'];
-    $telemovel= $_POST['telemovel'];
+    $name= $_POST['name'];
+    $address= $_POST['address'];
+    $zipcode= $_POST['zipcode'];
+    $telephone= $_POST['telephone'];
     $nif= $_POST['nif'];
     $email= $_POST['email'];
     $password= md5($_POST['password']);
@@ -17,10 +17,10 @@
 
     $cliente = $_SESSION['user'];
 
-    $idcliente = $cliente['IdCliente'];
+    $id = $cliente['id'];
 
-    $sql = "UPDATE `cliente` SET `Nome`='$nome',`Email`='$email',`Password`='$password',`Telefone`='$telemovel',
-    `Morada`='$morada',`Codigopostal`='$codigopostal',`NIF`='$nif' WHERE  IdCliente = '$id'";
+    $sql = "UPDATE `users` SET `name`='$name',`email`='$email',`password`='$password',`telephone`='$telephone',
+    `address`='$address',`zipcode`='$zipcode',`nif`='$nif' WHERE  id = '$id'";
     
     $resultado = $conexao -> query ($sql);
 

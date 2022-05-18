@@ -1,24 +1,24 @@
 <?php
 
 include('../config.php');
-$nome = $_POST['nome'];
-$categoria = $_POST['categoria'];
-$tamanho = $_POST['tamanho'];
-$preco = $_POST['preco'];
-$image = $_POST['imagemproduto'];
+$name = $_POST['name'];
+$category = $_POST['category'];
+$size = $_POST['size'];
+$price = $_POST['price'];
+$image = $_POST['imageproduct'];
 
 //»»»»»»»»»»»»»»»»»»»»Imagem»»»»»»»»»»»»»»»»»»»»»»
 
 if ($image != '') {
-    $folder = "../img/Produtos/";
+    $folder = "../img/products/";
     if (move_uploaded_file($_FILES['image']['tmp_name'], $folder . $image)) {
         
     }
 }
 
 //»»»»»»»»»»»»»»»»»»»»Produtos»»»»»»»»»»»»»»»»»»»»»»
-$sql = "INSERT INTO produtos(Nome, Categoria, Tamanho, Preco, Imagem) 
-    VALUES ('$nome', '$categoria', '$tamanho', '$preco','$image')";
+$sql = "INSERT INTO products(name, category, size, price, image) 
+    VALUES ('$name', '$category', '$size', '$price','$image')";
 
 $resultado = $conexao->query($sql);
 

@@ -42,7 +42,7 @@
 
                         include('config.php');
                         $id = $_GET['id'];
-                        $sql = "SELECT * FROM `produtos` WHERE IdProduto = '$id'";
+                        $sql = "SELECT * FROM `products` WHERE id = '$id'";
                         $resultado = $conexao->query($sql);
 
                         if ($resultado->num_rows > 0) {
@@ -51,15 +51,15 @@
 
                         echo '
                         <div class="col-md-6">
-                            <img class="card-img-top mb-5 mb-md-0" src="img/Produtos/' . $produto['Imagem'] . '" alt="#" />
+                            <img class="card-img-top mb-5 mb-md-0" src="img/Produtos/' . $produto['image'] . '" alt="#" />
                         </div> 
                         <div class="col-md-6">
-                            <h1 class="display-5 fw-bolder">' . $produto['Nome'] . '</h1>
+                            <h1 class="display-5 fw-bolder">' . $produto['name'] . '</h1>
                             <div class="fs-5 mb-5">
-                                <span class="text-decoration-line-through">' . $produto['Preco'] . ' €</span>
-                                <span>' . $produto['Preco'] . ' €</span>
+                                <span class="text-decoration-line-through">' . $produto['price'] . ' €</span>
+                                <span>' . $produto['price'] . ' €</span>
                             </div>
-                            <p class="lead">' . $produto['Descricao'] . '</p>
+                            <p class="lead">' . $produto['description'] . '</p>
                             <div class="card_area">
                                 <div class="product_count_area">
                                     <div class="product_count d-inline-block">

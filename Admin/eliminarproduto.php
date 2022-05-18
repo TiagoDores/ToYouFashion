@@ -2,7 +2,7 @@
     include "../config.php";
     $id = $_GET['id'];
 
-    $sql = "DELETE FROM `produto` WHERE IdProduto = '$id'";
+    $sql = "DELETE FROM `products` WHERE id = '$id'";
     $resultado = $conexao->query($sql);
     
     if ($resultado) {

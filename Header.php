@@ -28,7 +28,6 @@
                                     <li><a href="formAbout.php">Sobre Nós</a></li>
                                     <li><a href="#">Paginas</a>
                                         <ul class="submenu">
-                                            <li><a href="formlogin.php">Login</a></li>
                                             <li><a href="formCart.php">Carrinho</a></li>
                                             <li><a href="formProduct_details.php">Detalhes produtos</a></li>
                                             <li><a href="formConfirmation.php">Confirmation</a></li>
@@ -36,6 +35,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="formContacto.php">Contactos</a></li>
+                                    <li><a href="formlogin.php">Login</a></li>
                                 </ul>
                             </nav>
                         </div>
