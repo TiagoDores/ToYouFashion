@@ -58,7 +58,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label" for="imagemproduto">Anexar Imagens:</label>
-                                            <input class="form-control" type="file" name="imagemproduto" multiple required>
+                                            <input class="form-control" type="file" name="imagemproduto" required>
                                         </div>
                                         <div class="mt-4 mb-0">
                                             <button type="submit" value="submit" class="btn btn-primary">

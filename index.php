@@ -91,26 +91,27 @@
                 </div>
                 <div class="row">
                     <?php
-                        /*include('../config.php');
-                        $sql = "SELECT * FROM `produtos`";
-                        $resultado = $conexao->query($sql);
+                    include('config.php');
+                    $sql = "SELECT * FROM produtos ORDER BY IdProduto DESC LIMIT 3";
+                    $resultado = $conexao->query($sql);
 
-                        if ($resultado->num_rows > 0) {
-                            while ($a = $resultado->fetch_assoc()) {
-                                echo '<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                            <div class="single-new-pro mb-30 text-center">
-                                                <div class="product-img">
-                                                    <img src="'.$a['CaminhoImagem'].'" alt="">
-                                                </div>
-                                                <div class="product-caption">
-                                                    <h3><a href="product_details.html">'.$a['Nome'].'</a></h3>
-                                                    <span>'.$a['Preco'].' €</span>
-                                                </div>
-                                            </div>
-                                        </div>';
-                            }
+                    if ($resultado->num_rows > 0) {
+                        while ($a = $resultado->fetch_assoc()) {
+                            echo '
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-new-pro mb-30 text-center">
+                                    <div class="product-img">
+                                        <img src="img/Produtos/' . $a['Imagem'] . '">
+                                    </div>
+                                    <div class="product-caption">
+                                        <h3><a href="formProduct_details.php?id=' . $a['IdProduto'] . '">' . $a['Nome'] . '</a></h3>
+                                        <span>' . $a['Preco'] . ' €</span>
+                                    </div>
+                                </div>
+                            </div>';
                         }
-                        $conexao->close();*/
+                    }
+                    $conexao->close();
                     ?>
                 </div>
             </div>
@@ -122,24 +123,24 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(img/gallery/shop1.jpg);"></div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(img/gallery/gallery5.jpg);"></div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-12">
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
                                 <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                    <div class="gallery-img small-img" style="background-image: url(img/gallery/gallery2.jpg);"></div>
                                 </div>
                             </div>
                             <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
                                 <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                    <div class="gallery-img small-img" style="background-image: url(img/gallery/gallery3.jpg);"></div>
                                 </div>
                             </div>
                         </div>
@@ -282,13 +283,6 @@
                         <div class="video-wrap">
                             <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
                         </div>
-                    </div>
-                </div>
-                <!-- Arrow -->
-                <div class="thumb-content-box">
-                    <div class="thumb-content">
-                        <h3>Next Video</h3>
-                        <a href="#"> <i class="flaticon-arrow"></i></a>
                     </div>
                 </div>
             </div>

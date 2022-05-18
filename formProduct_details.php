@@ -4,13 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Watch shop | eCommers</title>
+    <title>To You Fashion | Loja</title>
+    <link rel="icon" href="img/logo/icon.png" type="image/png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
@@ -23,6 +21,10 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Bootstrap icons-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="assets/css/styles_product.css" rel="stylesheet" />
+
 </head>
 
 
@@ -32,64 +34,54 @@
     include("Header.php");
     ?>
     <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Watch Shop</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero Area End-->
         <!--================Single Product Area =================-->
-        <div class="product_image_area">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="product_img_slide owl-carousel">
-                            <div class="single_product_img">
-                                <img src="assets/img/gallery/gallery1.png" alt="#" class="img-fluid">
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                     <?php
+
+                        include('config.php');
+                        $id = $_GET['id'];
+                        $sql = "SELECT * FROM `produtos` WHERE IdProduto = '$id'";
+                        $resultado = $conexao->query($sql);
+
+                        if ($resultado->num_rows > 0) {
+                            $produto = $resultado->fetch_assoc();
+                        }
+
+                        echo '
+                        <div class="col-md-6">
+                            <img class="card-img-top mb-5 mb-md-0" src="img/Produtos/' . $produto['Imagem'] . '" alt="#" />
+                        </div> 
+                        <div class="col-md-6">
+                            <h1 class="display-5 fw-bolder">' . $produto['Nome'] . '</h1>
+                            <div class="fs-5 mb-5">
+                                <span class="text-decoration-line-through">' . $produto['Preco'] . ' €</span>
+                                <span>' . $produto['Preco'] . ' €</span>
                             </div>
-                            <div class="single_product_img">
-                                <img src="assets/img/gallery/gallery01.png" alt="#" class="img-fluid">
-                            </div>
-                            <div class="single_product_img">
-                                <img src="assets/img/gallery/gallery1.png" alt="#" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="single_product_text text-center">
-                            <h3>Foam filling cotton slow <br>
-                                rebound pillows</h3>
-                            <p>
-                                Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources. Credibly innovate granular internal or “organic” sources whereas high standards in web-readiness. Credibly innovate granular internal or organic sources whereas high standards in web-readiness. Energistically scale future-proof core competencies vis-a-vis impactful experiences. Dramatically synthesize integrated schemas. with optimal networks.
-                            </p>
+                            <p class="lead">' . $produto['Descricao'] . '</p>
                             <div class="card_area">
                                 <div class="product_count_area">
-                                    <p>Quantity</p>
                                     <div class="product_count d-inline-block">
                                         <span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span>
-                                        <input class="product_count_item input-number" type="text" value="1" min="0" max="10">
+                                        <input class="product_count_item input-number" type="text" value="1" min="0" max="">
                                         <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                                     </div>
-                                    <p>$5</p>
-                                </div>
-                                <div class="add_to_cart">
-                                    <a href="#" class="btn_3">add to cart</a>
+                                    <button class="btn hero-btn flex-shrink-0" type="button">
+                                            <i class="bi-cart-fill me-1"></i>
+                                            Adicionar <br >ao Carrinho
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div>';
+
+                        $conexao->close();
+
+                    ?>
+                    
                 </div>
             </div>
-        </div>
+        </section>
         <!--================End Single Product Area =================-->
         <!-- subscribe part here -->
         <section class="subscribe_part section_padding">
@@ -165,6 +157,7 @@
     <script src="./assets/js/mixitup.min.js"></script>
     <script src="./assets/js/jquery.counterup.min.js"></script>
     <script src="./assets/js/waypoints.min.js"></script>
+
 
 </body>
 

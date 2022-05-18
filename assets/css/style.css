@@ -3391,11 +3391,12 @@ input:hover, input:focus {
 
 .single-new-pro .product-img {
     overflow: hidden;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    height: 400px;
 }
 
 .single-new-pro .product-img img {
-    width: 100%;
+    width: 70%;
     transform: scale(1);
     -webkit-transition: all .4s ease-out 0s;
     -moz-transition: all .4s ease-out 0s;
@@ -3480,7 +3481,7 @@ input:hover, input:focus {
 
 .gallery-area .single-gallery .small-img {
     position: relative;
-    height: 330px;
+    height: 230px;
     background-size: cover;
     background-repeat: no-repeat
 }
@@ -3493,7 +3494,8 @@ input:hover, input:focus {
     overflow: hidden;
     border-bottom: 3px solid #ff2020;
     margin-bottom: 19px;
-    position: relative
+    position: relative;
+    height: 400px;
 }
 
 .popular-items .single-popular-items .popular-img img {
@@ -3510,7 +3512,8 @@ input:hover, input:focus {
     -moz-transition: all .4s ease-out 0s;
     -ms-transition: all .4s ease-out 0s;
     -o-transition: all .4s ease-out 0s;
-    transition: all .4s ease-out 0s
+    transition: all .4s ease-out 0s;
+    
 }
 
 .popular-items .single-popular-items .popular-img .img-cap span {
@@ -7899,7 +7902,7 @@ b, sup, sub, u, del {
 .card_area .product_count_area {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: left
 }
 
 .card_area .product_count_area p {
@@ -7909,7 +7912,9 @@ b, sup, sub, u, del {
 
 .card_area .product_count {
     border: 1px solid #828bb2;
-    margin: 0 35px
+    border-radius: 5px;
+    margin: 0 35px;
+    background-color: #828bb2;
 }
 
 @media (max-width: 991px) {
@@ -7933,10 +7938,11 @@ b, sup, sub, u, del {
 }
 
 .card_area .product_count input {
-    background-color: #828bb2;
-    color: #fff;
+    background-color: #fff;
+    color: #828bb2;
     border: 1px solid #828bb2;
-    color: #fff
+    border-radius: 5px;
+    color: #000
 }
 
 .card_area .add_to_cart {
@@ -11069,7 +11075,7 @@ input:focus {
 }
 
 .blog_part .single-home-blog .card-img-top {
-    border-radius: 0px
+    border-radius: 3px;
 }
 
 .blog_part .single-home-blog .card {
@@ -11378,3 +11384,4 @@ input:focus {
         font-size: 30px
     }
 }
+

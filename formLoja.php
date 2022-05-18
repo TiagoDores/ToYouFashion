@@ -4,11 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Watch shop | eCommers</title>
+    <title>To You Fashion | Loja</title>
+    <link rel="icon" href="img/logo/icon.png" type="image/png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -79,92 +78,45 @@
                     </div>
                 </div>
                 <!-- Nav Card -->
-                <?php
 
-                    include('../config.php');
-                    $sql = "SELECT * FROM `cliente` WHERE `Admin` = '0'";
-                    $resultado = $conexao->query($sql);
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row">
 
-                    if ($resultado->num_rows > 0) {
-                        while ($a = $resultado->fetch_assoc()) {
+                            <?php
+                            include('config.php');
+                            $sql = "SELECT * FROM produtos";
+                            $resultado = $conexao->query($sql);
 
-                            echo '
-                                <div class="tab-content" id="nav-tabContent">
-                                    <!-- card one -->
-                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                        <div class="row">
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                                <div class="single-popular-items mb-50 text-center">
-                                                    <div class="popular-img">
-                                                        <img src="assets/img/gallery/popular1.png" alt="">
-                                                        <div class="img-cap">
-                                                            <span>Add to cart</span>
-                                                        </div>
-                                                        <div class="favorit-items">
-                                                            <span class="flaticon-heart"></span>
-                                                        </div>
+                            if ($resultado->num_rows > 0) {
+                                while ($a = $resultado->fetch_assoc()) {
+                                    echo '
+                                        <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
+                                            <div class="single-popular-items mb-50 text-center">
+                                                <div class="popular-img">
+                                                    <img src="img/Produtos/' . $a['Imagem'] . '">
+                                                    <div class="img-cap">
+                                                        <span>Adicionar ao Carrinho</span>
                                                     </div>
-                                                    <div class="popular-caption">
-                                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                                        <span>$ 45,743</span>
+                                                    <div class="favorit-items">
+                                                        <span class="flaticon-heart"></span>
                                                     </div>
                                                 </div>
+                                                <div class="popular-caption">
+                                                    <h3><a href="formProduct_details.php?id=' . $a['IdProduto'] . '">' . $a['Nome'] . '</a></h3>
+                                                    <span>' . $a['Preco'] . ' €</span>
+                                                </div>   
                                             </div>
-                                            
-                                        </div>
-                                    </div>
-                                    <!-- Card two -->
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                        <div class="row">
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                                <div class="single-popular-items mb-50 text-center">
-                                                    <div class="popular-img">
-                                                        <img src="assets/img/gallery/popular1.png" alt="">
-                                                        <div class="img-cap">
-                                                            <span>Add to cart</span>
-                                                        </div>
-                                                        <div class="favorit-items">
-                                                            <span class="flaticon-heart"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="popular-caption">
-                                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                                        <span>$ 45,743</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Card three -->
-                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                        <div class="row">
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                                <div class="single-popular-items mb-50 text-center">
-                                                    <div class="popular-img">
-                                                        <img src="assets/img/gallery/popular1.png" alt="">
-                                                        <div class="img-cap">
-                                                            <span>Add to cart</span>
-                                                        </div>
-                                                        <div class="favorit-items">
-                                                            <span class="flaticon-heart"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="popular-caption">
-                                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                                        <span>$ 45,743</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Nav Card -->';
+                                        </div>';
+                                }
+                            }
+                            $conexao->close();
+                            ?>
 
-                        }
-                    }
-                ?>
-            </div>
+                        </div>
+                    </div>
+                </div>
+
         </section>
         <!-- Latest Products End -->
         <!--? Shop Method Start-->
