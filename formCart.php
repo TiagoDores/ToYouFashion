@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="pt-pt">
 
 <head>
   <meta charset="utf-8">
@@ -25,8 +25,29 @@
 
 <body>
   <?php
+
   include("Preloader.php");
   include("Header.php");
+
+  if (!empty($_SESSION['id']))
+
+    $id_produto = $_GET['id'];
+
+  if (!isset($_SESSION['carrinho'])) {
+    $_SESSION['carrinho'] = array();
+
+
+    if (!isset($_SESSION['carrinho'][$id_produto])) {
+      $_SESSION['carrinho'][$id_produto] = 1;
+    } else {
+      $_SESSION['carrinho'][$id_produto] += 1;
+    }
+    include '';
+  } else {
+    include '';
+  }
+
+
   ?>
   <main>
     <!-- Hero Area Start-->
@@ -127,7 +148,7 @@
                     <h5>Subtotal</h5>
                   </td>
                   <td>
-                    <h5>$2160.00</h5>
+                    <h5><?php echo number_format($total,2 ,',','.') ?> €</h5> 
                   </td>
                 </tr>
                 <tr class="shipping_area">

@@ -16,6 +16,7 @@
 <body class="sb-nav-fixed">
 
     <?php
+    require_once('restrito.php');
     session_start();
     include("Navbar.php");
     include("layoutSlidenav.php");

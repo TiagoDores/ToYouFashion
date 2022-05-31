@@ -96,7 +96,7 @@
                                                 <div class="popular-img">
                                                     <img src="img/Produtos/' . $a['image'] . '">
                                                     <div class="img-cap">
-                                                        <span>Adicionar ao Carrinho</span>
+                                                        <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
                                                     </div>
                                                     <div class="favorit-items">
                                                         <span class="flaticon-heart"></span>
