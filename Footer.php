@@ -63,9 +63,9 @@
                                 <h4>Suporte</h4>
                                 <ul>
                                     <li><a href="#">Perguntas Frequentes</a></li>
-                                    <li><a href="#">Termos &amp; condições</a></li>
-                                    <li><a href="#">Politica de Privacidade</a></li>
-                                    <li><a href="#">Reportar um Problema de Pagamentos</a></li>
+                                    <li><a href="TermosCondições.php">Termos &amp; condições</a></li>
+                                    <li><a href="PoliticaPrivacidade.php">Politica de Privacidade</a></li>
+                                    <li><a href="formContacto.php">Reportar um Problema de Pagamentos</a></li>
                                 </ul>
                             </div>
                         </div>

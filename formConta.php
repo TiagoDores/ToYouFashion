@@ -68,7 +68,7 @@
 
                         <?php
                         include('config.php');
-                        $sql = "SELECT * FROM `users` WHERE name = '$user'";
+                        $sql = "SELECT * FROM `users` WHERE id = '$id'";
                         $resultado = $conexao->query($sql);
 
                         if ($resultado->num_rows > 0) {

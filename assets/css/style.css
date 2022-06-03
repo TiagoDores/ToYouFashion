@@ -214,9 +214,6 @@ a {
     color: #635c5c
 }
 
-a:hover {
-    color: #fff
-}
 
 a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
     text-decoration: none
