@@ -73,7 +73,7 @@
                                             <td> <a class="btn btn-success me-2" href="formEditarUtilizador.php?id=' . $a['id'] . '"><i class="fas fa-flaticon-search"></i></a></td>
                                             <td> <a class="btn btn-info" href="formEditarUtilizador.php?id=' . $a['id'] . '"><i class="fas fa-pen"></i></a></td>
                                             <td> <a onclick=\'return confirm("Tem a certeza que deseja eliminar o Produto?")\'
-                                            class="btn btn-danger" href="eliminarUser.php?id=' . $a['id'] . '"><i class="fas fa-trash"></i></a></td>
+                                            class="btn btn-danger" href="eliminarproduto.php?id=' . $a['id'] . '"><i class="fas fa-trash"></i></a></td>
                                         </tr>';
                                     }
                                 }

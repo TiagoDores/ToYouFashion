@@ -1,63 +1,85 @@
-<?php
-// Import PHPMailer classes into the global namespace
-// These must be at the top of your script, not inside a function
+<?php   
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
- 
-session_start();
- 
-if(isset($_POST['send'])){
- 
-    $nome = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = ("Nome: " + $nome + "\\nMensagem: "+$_POST['message']);
 
-    $headers = "Content-Type: text/html; charset=UTF-8";
- 
-    //Load composer's autoloader
-    require 'vendor/autoload.php';
- 
-    $mail = new PHPMailer(true);                     // Passing `true` enables exceptions
-    try {
-        //Server settings
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
-        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'tiago.dores.td@gmail.com';     // Your Email/ Server Email
-        $mail->Password = 'Fuiscamado';                     // Your Password
-        $mail->SMTPOptions = array(
-            'ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => false,
-            'allow_self_signed' => true
-            )
-        );                         
-        $mail->SMTPSecure = 'ssl';                           
-        $mail->Port = 465;                                   
- 
-        //Send Email
-        $mail->setFrom($email);
- 
-        //Recipients
-        $mail->addAddress("tiago.dores.td@gmail.com");              
-        $mail->addReplyTo($email);
- 
-        //Content
-        $mail->isHTML(true);                                  
-        $mail->Subject = $subject;
-        $mail->Body    = $message;
-        $mail->header = $headers;
- 
-        $mail->send();
-        $_SESSION['message'] = 'Message has been sent';
-    } catch (Exception $e) {
-        $_SESSION['message'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
-    }
- 
-    header('location:index.php');
-}
-else{
-    $_SESSION['message'] = 'Por favor preencha';
-    header('location:index.php');
-}
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+$email = $_POST['email'];
+$assunto =$_POST['subject'];
+$mensagem = $_POST['message'];
+$nome = $_POST['name'];
+
+// Inicia a classe PHPMailer 
+$mail = new PHPMailer(true);
+
+// Método de envio 
+$mail->IsSMTP(); 
+
+// Enviar por SMTP 
+$mail->Host ="smtp.gmail.com"; 
+
+// Você pode alterar este parametro para o endereço de SMTP do seu provedor 
+$mail->Port = 25; 
+
+// Usar autenticação SMTP (obrigatório) 
+$mail->SMTPAuth = true; 
+
+// Usuário do servidor SMTP (endereço de email) 
+// obs: Use a mesma senha da sua conta de email 
+$mail->Username = 'tiago.dores.td@gmail.com'; 
+$mail->Password = 'Fuiscamado'; 
+
+// Configurações de compatibilidade para autenticação em TLS 
+$mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
+
+// Você pode habilitar esta opção caso tenha problemas. Assim pode identificar mensagens de erro. 
+//$mail->SMTPDebug = 2; 
+
+// Define o remetente 
+// Seu e-mail 
+$mail->From = $email; 
+
+// Seu nome 
+$mail->FromName = $nome; 
+
+// Define o(s) destinatário(s) 
+$mail->AddAddress('tiago.dores.td@gmail.com'); 
+
+// Opcional: mais de um destinatário
+// $mail->AddAddress('erasmusmais@aehn.net'); 
+
+// Opcionais: CC e BCC
+// $mail->AddCC('joana@provedor.com', 'Joana'); 
+// $mail->AddBCC('roberto@gmail.com', 'Roberto'); 
+
+// Definir se o e-mail é em formato HTML ou texto plano 
+// Formato HTML . Use "false" para enviar em formato texto simples ou "true" para HTML.
+$mail->IsHTML(true); 
+
+// Charset (opcional) 
+$mail->CharSet = 'UTF-8'; 
+
+// Assunto da mensagem 
+$mail->Subject = $assunto; 
+
+// Corpo do email 
+$mail->Body = "Mensagem enviada pelo site: " .$mensagem; 
+
+// Opcional: Anexos 
+// $mail->AddAttachment("/home/usuario/public_html/documento.pdf", "documento.pdf"); 
+
+// Envia o e-mail 
+$enviado = $mail->Send(); 
+
+// Exibe uma mensagem de resultado 
+if ($enviado) 
+{ 
+     $sucesso="A sua mensagem foi enviado com sucesso!";
+    header("location:formContacto.php?sucesso=".$sucesso);  
+  }else{
+      $erro="Houve um erro ao enviar o email";
+      header("location:formContacto.php?erro=".$erro);
+} 
+?>

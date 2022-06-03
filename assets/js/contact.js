@@ -14,11 +14,11 @@ $(document).ready(function(){
             rules: {
                 name: {
                     required: true,
-                    minlength: 2
+                    //minlength: 2
                 },
                 subject: {
                     required: true,
-                    minlength: 4
+                    //minlength: 4
                 },
                 number: {
                     required: true,
@@ -30,29 +30,29 @@ $(document).ready(function(){
                 },
                 message: {
                     required: true,
-                    minlength: 20
+                    //minlength: 20
                 }
             },
             messages: {
-                name: {
+                /*name: {
                     required: "come on, you have a name, don't you?",
                     minlength: "your name must consist of at least 2 characters"
-                },
-                subject: {
+                },*/
+                /*subject: {
                     required: "come on, you have a subject, don't you?",
                     minlength: "your subject must consist of at least 4 characters"
-                },
-                number: {
+                },*/
+                /*number: {
                     required: "come on, you have a number, don't you?",
                     minlength: "your Number must consist of at least 5 characters"
-                },
+                },*/
                 email: {
-                    required: "no email, no message"
+                    required: "Por favor insira uma email válido"
                 },
-                message: {
+                /*message: {
                     required: "um...yea, you have to write something to send this form.",
                     minlength: "thats all? really?"
-                }
+                }*/
             },
             submitHandler: function(form) {
                 $(form).ajaxSubmit({

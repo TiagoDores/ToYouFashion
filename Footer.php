@@ -87,10 +87,8 @@
                         <div class="footer-copy-right f-right">
                             <!-- social -->
                             <div class="footer-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/toyoufashion"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="https://www.instagram.com/toyoufashionstore/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/toyoufashion" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             </div>
                         </div>
                     </div>

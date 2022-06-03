@@ -22,7 +22,7 @@
 
         include('../config.php');
         $id = $_GET['id'];
-        $sql = "SELECT * FROM `cliente` WHERE IdCliente = '$id'";
+        $sql = "SELECT * FROM `users` WHERE IdCliente = '$id'";
         $resultado = $conexao->query($sql);
 
         if ($resultado->num_rows > 0) {

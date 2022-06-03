@@ -91,27 +91,33 @@
                 </div>
                 <div class="row">
                     <?php
-                    include('config.php');
-                    $sql = "SELECT * FROM produtos ORDER BY IdProduto DESC LIMIT 3";
-                    $resultado = $conexao->query($sql);
+                   include('config.php');
+                   $sql = "SELECT * FROM products";
+                   $resultado = $conexao->query($sql);
 
-                    if ($resultado->num_rows > 0) {
-                        while ($a = $resultado->fetch_assoc()) {
-                            echo '
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-new-pro mb-30 text-center">
-                                    <div class="product-img">
-                                        <img src="img/Produtos/' . $a['Imagem'] . '">
+                   if ($resultado->num_rows > 0) {
+                       while ($a = $resultado->fetch_assoc()) {
+                           echo '
+                               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="single-popular-items mb-50 text-center">
+                                        <div class="popular-img">
+                                            <img src="img/Produtos/' . $a['image'] . '">
+                                            <div class="img-cap">
+                                                <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
+                                            </div>
+                                            <div class="favorit-items">
+                                                <span class="flaticon-heart"></span>
+                                            </div>
+                                        </div>
+                                        <div class="popular-caption">
+                                        <h3><a href="formProduct_details.php?id=' . $a['id'] . '">' . $a['name'] . '</a></h3>
+                                        <span>' . $a['price'] . ' €</span>
+                                        </div>
                                     </div>
-                                    <div class="product-caption">
-                                        <h3><a href="formProduct_details.php?id=' . $a['IdProduto'] . '">' . $a['Nome'] . '</a></h3>
-                                        <span>' . $a['Preco'] . ' €</span>
-                                    </div>
-                                </div>
-                            </div>';
-                        }
-                    }
-                    $conexao->close();
+                                </div>';
+                       }
+                   }
+                   $conexao->close();
                     ?>
                 </div>
             </div>
@@ -127,7 +133,7 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery mb-30">
+                    <div class="single-gallery mb-30">
                             <div class="gallery-img big-img" style="background-image: url(img/gallery/gallery5.jpg);"></div>
                         </div>
                     </div>
@@ -180,91 +186,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular2.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular3.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular4.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular5.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular6.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <!-- Button -->
                 <div class="row justify-content-center">
@@ -275,55 +196,9 @@
             </div>
         </div>
         <!-- Popular Items End -->
-        <!--? Video Area Start -->
-        <div class="video-area">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="video-wrap">
-                            <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Video Area End -->
-        <!--? Watch Choice  Start-->
-        <div class="watch-area section-padding30">
-            <div class="container">
-                <div class="row align-items-center justify-content-between padding-130">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="watch-details mb-40">
-                            <h2>Watch of Choice</h2>
-                            <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                            <a href="shop.html" class="btn">Show Watches</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40">
-                            <img src="assets/img/gallery/choce_watch1.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40">
-                            <img src="assets/img/gallery/choce_watch2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="watch-details mb-40">
-                            <h2>Watch of Choice</h2>
-                            <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                            <a href="shop.html" class="btn">Show Watches</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Watch Choice  End-->
+    
         <!--? Shop Method Start-->
-        <div class="shop-method-area">
+        <!-- <div class="shop-method-area">
             <div class="container">
                 <div class="method-wrapper">
                     <div class="row d-flex justify-content-between">
@@ -351,7 +226,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- Shop Method End-->
     </main>
 

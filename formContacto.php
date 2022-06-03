@@ -303,14 +303,14 @@
                                 //scrollwheel: false
                             });
 
-                            var loja = new google.maps.Marker({
+                            /*var loja = new google.maps.Marker({
                                 label: 'TO YOU FASHION',
                                 position: {
                                     lat: 40.51347689111692,
                                     lng: -8.492041561538667
                                 },
                                 map: map
-                            });
+                            });*/
                         }
                     </script>
 
@@ -325,11 +325,11 @@
                         <h2 class="contact-title">Contacte-nos</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="enviarEmail.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="enviarEmail.php" method="post" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder="Mensagem"></textarea>
+                                        <textarea class="form-control w-100" name="message" id="message" rows="9" placeholder="Mensagem"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">

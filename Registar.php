@@ -20,7 +20,7 @@
 
     if ($resultado) {
         $msg="Registo Inserido";
-        header("location:index.php?msg=$msg");
+        header("location:formlogin.php?msg=$msg");
     }else {
         $msg="Erro a inserir registo";
         header("location:formRegistar.php?msg=$msg");
