@@ -37,8 +37,8 @@
                                 <h4>Quick Links</h4>
                                 <ul>
                                     <li><a href="formAbout.php">Sobre Nós</a></li>
-                                    <li><a href="#">Offers & Discounts</a></li>
-                                    <li><a href="#">Get Coupon</a></li>
+                                    <!--<li><a href="#">Offers & Discounts</a></li>
+                                    <li><a href="#">Get Coupon</a></li>-->
                                     <li><a href="formContacto.php">Contacta-nos</a></li>
                                 </ul>
                             </div>
@@ -62,7 +62,7 @@
                             <div class="footer-tittle">
                                 <h4>Suporte</h4>
                                 <ul>
-                                    <li><a href="#">Perguntas Frequentes</a></li>
+                                    <!--<li><a href="#">Perguntas Frequentes</a></li>-->
                                     <li><a href="TermosCondições.php">Termos &amp; condições</a></li>
                                     <li><a href="PoliticaPrivacidade.php">Politica de Privacidade</a></li>
                                     <li><a href="formContacto.php">Reportar um Problema de Pagamentos</a></li>

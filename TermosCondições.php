@@ -73,11 +73,11 @@
                                     baixados em sua posse, seja em formato eletrónico ou impresso.</p>            
                             <h4>3. Isenção de responsabilidade</h4>            
                                 <ol>            
-                                    <li>Os materiais no site da toyoufashion são fornecidos 'como estão'. toyoufashion não oferece garantias, expressas ou implícitas,
+                                    <li><p>Os materiais no site da toyoufashion são fornecidos 'como estão'. toyoufashion não oferece garantias, expressas ou implícitas,
                                          e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização,            
-                                         adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos. </li>            
-                                    <li>Além disso, o toyoufashion não garante ou faz qualquer representação relativa à precisão, aos resultados prováveis ​​ou à confiabilidade do uso dos            
-                                        materiais em seu site ou de outra forma relacionado a esses materiais ou em sites vinculados a este site.</li>            
+                                         adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos. </p></li>            
+                                    <li><p>Além disso, o toyoufashion não garante ou faz qualquer representação relativa à precisão, aos resultados prováveis ​​ou à confiabilidade do uso dos            
+                                        materiais em seu site ou de outra forma relacionado a esses materiais ou em sites vinculados a este site.</p></li>            
                                 </ol>            
                             <h4>4. Limitações</h4>            
                                 <p>Em nenhum caso o toyoufashion ou seus fornecedores serão responsáveis ​​por quaisquer danos (incluindo, sem limitação, danos por perda de dados ou 

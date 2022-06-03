@@ -98,23 +98,23 @@
                    if ($resultado->num_rows > 0) {
                        while ($a = $resultado->fetch_assoc()) {
                            echo '
-                               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                    <div class="single-popular-items mb-50 text-center">
-                                        <div class="popular-img">
-                                            <img src="img/Produtos/' . $a['image'] . '">
-                                            <div class="img-cap">
-                                                <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
-                                            </div>
-                                            <div class="favorit-items">
-                                                <span class="flaticon-heart"></span>
-                                            </div>
-                                        </div>
-                                        <div class="popular-caption">
-                                        <h3><a href="formProduct_details.php?id=' . $a['id'] . '">' . $a['name'] . '</a></h3>
-                                        <span>' . $a['price'] . ' €</span>
-                                        </div>
+                           <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="img/Produtos/' . $a['image'] . '">
+                                    <div class="img-cap">
+                                        <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
                                     </div>
-                                </div>';
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="formProduct_details.php?id=' . $a['id'] . '">' . $a['name'] . '</a></h3>
+                                    <span>' . $a['price'] . ' €</span>
+                                </div>   
+                            </div>
+                        </div>';
                        }
                    }
                    $conexao->close();
@@ -247,7 +247,7 @@
     <!-- Search model end -->
 
     <!-- JS here -->
-
+    <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -265,7 +265,7 @@
     <script src="./assets/js/animated.headline.js"></script>
     <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- Scrollup, nice-select, sticky -->
+    <!-- Scroll up, nice-select, sticky -->
     <script src="./assets/js/jquery.scrollUp.min.js"></script>
     <script src="./assets/js/jquery.nice-select.min.js"></script>
     <script src="./assets/js/jquery.sticky.js"></script>

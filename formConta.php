@@ -65,7 +65,6 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
-
                         <?php
                         include('config.php');
                         $sql = "SELECT * FROM `users` WHERE id = '$id'";
