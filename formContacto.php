@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>To You Fashion | Login</title>
+    <title>To You Fashion | Contacto</title>
     <link rel="icon" href="img/logo/icon.png" type="image/png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -340,7 +340,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email">
-                                    </div>
+                                    </div> 
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">

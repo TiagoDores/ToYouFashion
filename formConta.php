@@ -67,7 +67,8 @@
                     <div class="col-lg-6 col-md-6">
                         <?php
                         include('config.php');
-                        $sql = "SELECT * FROM `users` WHERE id = '$id'";
+                        $user = $_SESSION['user'];
+                        $sql = "SELECT * FROM `users` WHERE name = '$user'";
                         $resultado = $conexao->query($sql);
 
                         if ($resultado->num_rows > 0) {
@@ -78,7 +79,7 @@
                         ?>
                         <div class="login_part_form">
                             <div class="login_part_form_iner">
-                                <form class="row contact_form" action="Editar.php" method="post" novalidate="novalidate">
+                                <form class="row contact_form" action="Editar.phpid=<?= $id; ?>" method="post" novalidate="novalidate">
                                     <div class="col-md-12 form-group p_star">
                                         <input type="text" class="form-control" id="name" name="name" value="<?= $user['name'] ?>" placeholder="Nome">
                                     </div>

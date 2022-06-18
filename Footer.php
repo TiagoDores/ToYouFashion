@@ -24,8 +24,8 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do
-                                            eiusmod tem.</p>
+                                        <p>Consigo e para si em todas as ocasiões, a qualquer momento! 
+                                            Everywhere, everytime, to everyone, to you!</p>
                                     </div>
                                 </div>
                             </div>

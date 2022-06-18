@@ -10,6 +10,6 @@
     }else{
         $msg = "Erro ao eliminar Registo";
     }
-    header("location:UserList.php?msg»=$msg");
+    header("location:UsersList.php?msg»=$msg");
     $conexao->close();
 ?>

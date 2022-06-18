@@ -1,6 +1,6 @@
 <?php
 
-    include('config.php');
+    include('../config.php');
     $name= $_POST['name'];
     $address= $_POST['address'];
     $zipcode= $_POST['zipcode'];
@@ -19,10 +19,10 @@
 
     if ($resultado) {
         $msg="Registo Inserido";
-        header("location:formlogin.php?msg=$msg");
+        header("location:UsersList.php?msg=$msg");
     }else {
         $msg="Erro a inserir registo";
-        header("location:formRegistar.php?msg=$msg");
+        header("location:UsersList.php?msg=$msg");
     }
     $conexao->close();
 ?>

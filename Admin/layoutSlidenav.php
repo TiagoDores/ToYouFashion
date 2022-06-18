@@ -55,41 +55,16 @@
                                 </div>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAdmins" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                            Admins
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapseAdmins" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link" href="AdminList.php">
-                                    <div class="sb-nav-link-icon"></div>
-                                    Lista de Admins
-                                </a>
-                                <a class="nav-link" href="formRegistar.php">
-                                    <div class="sb-nav-link-icon"></div>
-                                    Adicionar Novo Admin
-                                </a>
-                            </nav>
-                        </div>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="false" aria-controls="collapsePages">
+                        <a class="nav-link" href="AdminList.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                            Admin
+                        </a>
+
+                        <a class="nav-link" href="UsersList.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
                             Utilizadores
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapseUsers" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link" href="UsersList.php">
-                                    <div class="sb-nav-link-icon"></div>
-                                    Lista de Utilizadores
-                                </a>
-                                <a class="nav-link" href="formRegistar.php">
-                                    <div class="sb-nav-link-icon"></div>
-                                    Adicionar Novo Utilizador
-                                </a>
-                            </nav>
-                        </div>
 
                         <a class="nav-link" href="Produtos.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-cart-plus"></i></div>

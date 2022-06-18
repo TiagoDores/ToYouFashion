@@ -12,8 +12,14 @@ CREATE TABLE `users` (
 	`address` varchar(300) NOT NULL,
 	`zipcode` varchar(9) NOT NULL,
     `country` varchar(50) NOT NULL,
-	`nif` varchar(9) DEFAULT NULL,
-    `admin` boolean
+	`nif` varchar(9) DEFAULT NULL
+);
+
+CREATE TABLE `admin` (
+	`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(100) NOT NULL,
+	`email` varchar(50) NOT NULL,
+	`password` varchar(50) NOT NULL
 );
 
 CREATE TABLE `products` (

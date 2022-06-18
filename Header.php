@@ -25,14 +25,14 @@
                                 <ul id="navigation">
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="formLoja.php">Produtos</a></li>
-                                    <li><a href="#">Paginas</a>
+                                    <!--<li><a href="#">Paginas</a>
                                         <ul class="submenu">
                                             <li><a href="formCart.php">Carrinho</a></li>
                                             <li><a href="formProduct_details.php">Detalhes produtos</a></li>
                                             <li><a href="formConfirmation.php">Confirmation</a></li>
                                             <li><a href="formCheckout.php">Product Checkout</a></li>
                                         </ul>
-                                    </li>
+                                    </li>--->
                                     <li><a href="formAbout.php">Sobre Nós</a></li>
                                     <li><a href="formContacto.php">Contactos</a></li>
 
@@ -41,12 +41,12 @@
                                     if (isset($_SESSION['user'])) {
                                         $user = $_SESSION['user'];
                                         echo
-                                        '<li><a class="text-dark" href="formConta.php">' . $user . '<span class="flaticon-user"></span></a></li>
-                                        <li><a href="formCart.php"><span class="flaticon-shopping-cart"></span></a> </li>';
+                                        '<li><a class="text-dark" href="formConta.php">' . $user . '<span class="flaticon-user" style="margin-left: 7px;"></span></a></li>
+                                        <li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">'. count($_SESSION["carrinho"]) . '</span></i></a> </li>';
                                     } else {
                                         echo
                                         '<li><a class="text-dark" href="formlogin.php"><span class="flaticon-user"></span></a></li>
-                                        <li><a href="formCart.php"><span class="flaticon-shopping-cart"></span></a> </li>';
+                                        <li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">0</span></i></a> </li>';
                                     }
 
                                     ?>

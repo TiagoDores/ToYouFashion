@@ -48,9 +48,9 @@
         <!-- Latest Products Start -->
         <section class="popular-items latest-padding">
             <div class="container">
-                <div class="row product-btn justify-content-between mb-40">
+                <!---<div class="row product-btn justify-content-between mb-40">
                     <div class="properties__button">
-                        <!--Nav Button  -->
+                        <--Nav Button  --
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Novidades</a>
@@ -58,12 +58,12 @@
                                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"> Mais Popular </a>
                             </div>
                         </nav>
-                        <!--End Nav Button  -->
+                        <--End Nav Button  --
                     </div>
-                    <!-- Grid and List view -->
+                    <-- Grid and List view --
                     <div class="grid-list-view">
                     </div>
-                    <!-- Select items -->
+                    <-- Select items --
                     <div class="select-this">
                         <form action="#">
                             <div class="select-itms">
@@ -77,7 +77,7 @@
                         </form>
                     </div>
                 </div>
-                <!-- Nav Card -->
+                <-- Nav Card -->
 
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -94,9 +94,9 @@
                                         <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
                                             <div class="single-popular-items mb-50 text-center">
                                                 <div class="popular-img">
-                                                    <img src="img/Produtos/' . $a['image'] . '">
+                                                    <img src="img/products/' . $a['image'] . '">
                                                     <div class="img-cap">
-                                                        <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
+                                                        <a href="configcarrinho.php?action=add&id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
                                                     </div>
                                                     <div class="favorit-items">
                                                         <span class="flaticon-heart"></span>

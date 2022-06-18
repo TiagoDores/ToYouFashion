@@ -1,9 +1,11 @@
 <?php
     include "../config.php";
     $id = $_GET['id'];
+    
+    $sql_delete = "DELETE FROM `products` WHERE `id` = '$id'";
+    $resultado = $conexao->query($sql_delete);
 
-    $sql = "DELETE FROM `products` WHERE id = '$id'";
-    $resultado = $conexao->query($sql);
+    //echo $sql_delete;
     
     if ($resultado) {
         $msg = "Registo Eliminado";

@@ -78,51 +78,58 @@
             </div>
         </div>
         <!-- slider Area End-->
-        <!-- ? New Product Start -->
-        <section class="new-product-area section-padding30">
+        <!--? Popular Items Start -->
+        <div class="popular-items section-padding30">
             <div class="container">
                 <!-- Section tittle -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="section-tittle mb-70">
-                            <h2>Novas chegadas</h2>
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-10">
+                        <div class="section-tittle mb-70 text-center">
+                            <h2>Novas Chegadas</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <?php
-                   include('config.php');
-                   $sql = "SELECT * FROM products";
-                   $resultado = $conexao->query($sql);
+                <?php
+                        include('config.php');
+                        $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 4";
+                        $resultado = $conexao->query($sql);
 
-                   if ($resultado->num_rows > 0) {
-                       while ($a = $resultado->fetch_assoc()) {
-                           echo '
-                           <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
-                            <div class="single-popular-items mb-50 text-center">
-                                <div class="popular-img">
-                                    <img src="img/Produtos/' . $a['image'] . '">
-                                    <div class="img-cap">
-                                        <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
-                                    </div>
-                                    <div class="favorit-items">
-                                        <span class="flaticon-heart"></span>
-                                    </div>
-                                </div>
-                                <div class="popular-caption">
-                                    <h3><a href="formProduct_details.php?id=' . $a['id'] . '">' . $a['name'] . '</a></h3>
-                                    <span>' . $a['price'] . ' €</span>
-                                </div>   
-                            </div>
-                        </div>';
-                       }
-                   }
-                   $conexao->close();
+                        if ($resultado->num_rows > 0) {
+                            while ($a = $resultado->fetch_assoc()) {
+                                echo '
+                                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
+                                        <div class="single-popular-items mb-50 text-center">
+                                            <div class="popular-img">
+                                                <img src="img/products/' . $a['image'] . '">
+                                                <div class="img-cap">
+                                                    <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
+                                                </div>
+                                                <div class="favorit-items">
+                                                    <span class="flaticon-heart"></span>
+                                                </div>
+                                            </div>
+                                            <div class="popular-caption">
+                                                <h3><a href="formProduct_details.php?id=' . $a['id'] . '">' . $a['name'] . '</a></h3>
+                                                <span>' . $a['price'] . ' €</span>
+                                            </div>   
+                                        </div>
+                                    </div>';
+                            }
+                        }
+                        $conexao->close();
                     ?>
                 </div>
+                <!-- Button -->
+                <div class="row justify-content-center">
+                    <div class="room-btn pt-70">
+                        <a href="formLoja.php" class="btn view-btn1">Ver Mais Produtos</a>
+                    </div>
+                </div>
             </div>
-        </section>
-        <!--  New Product End -->
+        </div>
+        <!-- Popular Items End -->
+
         <!--? Gallery Area Start -->
         <div class="gallery-area">
             <div class="container-fluid p-0 fix">
@@ -156,46 +163,7 @@
             </div>
         </div>
         <!-- Gallery Area End -->
-        <!--? Popular Items Start -->
-        <div class="popular-items section-padding30">
-            <div class="container">
-                <!-- Section tittle -->
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8 col-md-10">
-                        <div class="section-tittle mb-70 text-center">
-                            <h2>Popular Items</h2>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular1.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Button -->
-                <div class="row justify-content-center">
-                    <div class="room-btn pt-70">
-                        <a href="catagori.html" class="btn view-btn1">View More Products</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Popular Items End -->
+
     
         <!--? Shop Method Start-->
         <!-- <div class="shop-method-area">
@@ -246,7 +214,7 @@
     </div>
     <!-- Search model end -->
 
-    <!-- JS here -->
+     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
@@ -280,6 +248,7 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+
 
 </body>
 

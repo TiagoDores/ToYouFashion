@@ -28,12 +28,86 @@
                     <li class="breadcrumb-item active">Produtos</li>
                 </ol>
                 <div class="mt-5 mb-4">
-                    <form action="formInserirProduto.php">
-                        <button type="submit" value="submit" class="btn btn-primary">
-                            <a><i class="fas fa-plus"></i> Adicionar Novo Produto</a>
-                        </button>
-                    </form>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInsertProduct">
+                        <a><i class="fas fa-plus"></i> Adicionar um Novo Produto</a>
+                    </button>
                 </div>
+                <div class="modal fade" id="ModalInsertProduct">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Adicionar um Novo Produto</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <form action="InsertProduct.php" method="post" novalidate="novalidate" enctype="multipart/form-data">
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="name" name="name" value="" placeholder="Nome" required>
+                                                <label for="name">Nome</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label" for="image">Imagem:</label>
+                                                <input class="form-control" type="file" name="image" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <select class="form-select p-3" name="category">
+                                                    <option value="">Selecione uma Categoria</option>
+                                                    <option value="Man">Homem</option>
+                                                    <option value="Women">Mulher</option>
+                                                    <option value="Children">Criança</option>
+                                                    <option value="Accessories">Acessórios</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="size" name="size" value="" placeholder="Tamanho" required>
+                                                <label for="name">Tamanho</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-4">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="price" name="price" value="" placeholder="Preço">
+                                                <label for="price">Preço</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <div>
+                                                <label for="description">Descrição:</label>
+                                                <textarea class="form-control" rows="4" id="description" name="description"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Adicionar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal to Insert End-->
+
+                <!-- Table -->
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-user"></i>
@@ -70,10 +144,13 @@
                                             <td>' . $a['name'] . '</td>
                                             <td>' . $a['category'] . '</td>
                                             <td>' . $a['price'] . '</td>
-                                            <td> <a class="btn btn-success me-2" href="formEditarUtilizador.php?id=' . $a['id'] . '"><i class="fas fa-flaticon-search"></i></a></td>
-                                            <td> <a class="btn btn-info" href="formEditarUtilizador.php?id=' . $a['id'] . '"><i class="fas fa-pen"></i></a></td>
-                                            <td> <a onclick=\'return confirm("Tem a certeza que deseja eliminar o Produto?")\'
-                                            class="btn btn-danger" href="eliminarproduto.php?id=' . $a['id'] . '"><i class="fas fa-trash"></i></a></td>
+                                            <td>
+                                                <a class="btn btn-info" href="FormEditProducts.php?id='.$a['id'].'"><i class="fas fa-pen"></i></a>
+                                            </td>
+                                            <td> 
+                                                <a class="btn btn-danger" onClick=\'javascript: return confirm ("Tem a certeza que deseja eliminar o registo?");\' 
+                                                    href="EliminateProduct.php?id='.$a['id'].'"><i class="fas fa-trash"></i></a>
+                                            </td>
                                         </tr>';
                                     }
                                 }
@@ -83,6 +160,8 @@
                         </table>
                     </div>
                 </div>
+                <!-- Table End -->
+
             </div>
         </main>
         <?php

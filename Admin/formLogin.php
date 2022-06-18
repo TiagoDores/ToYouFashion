@@ -20,21 +20,17 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form  class="row contact_form" action="../login.php" method="post" novalidate="novalidate">
+                                        <form  class="row contact_form" action="login.php" method="post" novalidate="novalidate">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="email" type="email" placeholder="name@example.com" />
-                                                <label for="email">Email address</label>
+                                                <input type="text" class="form-control" id="email" name="email" value="" placeholder="Email">
+                                                <label for="email">Email</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="password" type="password" placeholder="Password" />
+                                                <input type="password" class="form-control" id="password" name="password" value="" placeholder="Password">
                                                 <label for="password">Password</label>
                                             </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
-                                                <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
-                                            </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="btn btn-primary" type="submit" href="../login.php">Login</a>
+                                                <button type="submit" value="submit" class="btn btn-primary">Login</button>
                                             </div>
                                         </form>
                                     </div>

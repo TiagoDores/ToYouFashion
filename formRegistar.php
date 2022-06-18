@@ -88,14 +88,9 @@
                                         <input type="password" class="form-control" id="password" name="password" value="" placeholder="Password" required>
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <div class="creat_account d-flex align-items-center">
-                                            <input type="checkbox" id="f-option" name="selector">
-                                            <label for="f-option">Lembrar-me</label>
-                                        </div>
                                         <button type="submit" value="submit" class="btn_3">
-                                            Sing in
+                                            Registar
                                         </button>
-                                        <a class="lost_pass" href="#">forget password?</a>
                                     </div>
                                 </form>
                             </div>
