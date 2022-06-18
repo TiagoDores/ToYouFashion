@@ -91,16 +91,16 @@
                         <td><input type="number" size="3" name="prod[' . $id . ']" value="' . $qtd . '" /></td>
                         <td>' . $price . '€ </td>
                         <td>' . $sub . ' € </td>
-                        <td><a href="?action=del&id=' . $id . '">Remover</a></td>
+                        <td><a class="btn btn-danger" onClick=\'javascript: return confirm ("Tem a certeza que deseja eliminar o producto?");\' 
+                        href="?action=del&id=' . $id . '" style="border-radius: 10px; padding: 15px;"><i class="fas fa-trash"></i></a></td>
                       </tr>';
                   }
-        
-                  echo '<tr>                         
-                        <td colspan="4">Total</td>
-                        <td>' . $total . ' €</td>
-                      </tr>';
                 }
               }
+              echo '<tr>                         
+                        <td colspan="3">Total</td>
+                        <td>' . $total . ' €</td>
+                      </tr>';
         
               echo '
                       </tbody>

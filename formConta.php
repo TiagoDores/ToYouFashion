@@ -57,7 +57,7 @@
                                 if (isset($_SESSION['user'])) {
                                     $user = $_SESSION['user'];
                                     echo
-                                    '<h2>' . $user . '</h2>
+                                    '<h2>' . $user['name'] . '</h2>
                                     <a href="logout.php" class="btn_3">Log Out</a>';
                                 }
                                 ?>
@@ -68,7 +68,8 @@
                         <?php
                         include('config.php');
                         $user = $_SESSION['user'];
-                        $sql = "SELECT * FROM `users` WHERE name = '$user'";
+                        $iduser = $user['id'];
+                        $sql = "SELECT * FROM `users` WHERE id = $iduser";
                         $resultado = $conexao->query($sql);
 
                         if ($resultado->num_rows > 0) {

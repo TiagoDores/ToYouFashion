@@ -41,13 +41,21 @@
                                     if (isset($_SESSION['user'])) {
                                         $user = $_SESSION['user'];
                                         echo
-                                        '<li><a class="text-dark" href="formConta.php">' . $user . '<span class="flaticon-user" style="margin-left: 7px;"></span></a></li>
-                                        <li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">'. count($_SESSION["carrinho"]) . '</span></i></a> </li>';
+                                        '<li><a class="text-dark" href="formConta.php">' . $user['name'] . '<span class="flaticon-user" style="margin-left: 7px;"></span></a></li>';
+                                        
                                     } else {
                                         echo
-                                        '<li><a class="text-dark" href="formlogin.php"><span class="flaticon-user"></span></a></li>
-                                        <li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">0</span></i></a> </li>';
+                                        '<li><a class="text-dark" href="formlogin.php"><span class="flaticon-user"></span></a></li>';
+                                        
                                     }
+
+                                    if (isset($_SESSION['cart'])) {
+										echo '<li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">'. count($_SESSION["cart"]) . '</span></i></a> </li>';
+									} else {
+
+										echo '<li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">0</span></i></a> </li>';
+									}
+
 
                                     ?>
                                 </ul>

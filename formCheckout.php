@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="pt-pt">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Watch shop | eCommers</title>
+  <title>To You Fashion | Checkout</title>
+  <link rel="icon" href="img/logo/icon.png" type="image/png">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
   <!-- CSS here -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -28,6 +27,8 @@
   <?php
   include("Preloader.php");
   include("Header.php");
+  include("config.php");
+  include("configcarrinho.php")
   ?>
   <main>
     <!-- Hero Area Start-->
@@ -46,73 +47,27 @@
     </div>
     <!--================Checkout Area =================-->
     <section class="checkout_area section_padding">
-      <div class="container">
-        <div class="returning_customer">
-          <div class="check_title">
-            <h2>
-              Returning Customer?
-              <a href="#">Click here to login</a>
-            </h2>
-          </div>
-          <p>
-            If you have shopped with us before, please enter your details in the
-            boxes below. If you are a new customer, please proceed to the
-            Billing & Shipping section.
-          </p>
-          <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-            <div class="col-md-6 form-group p_star">
-              <input type="text" class="form-control" id="name" name="name" value=" " />
-              <span class="placeholder" data-placeholder="Username or Email"></span>
-            </div>
-            <div class="col-md-6 form-group p_star">
-              <input type="password" class="form-control" id="password" name="password" value="" />
-              <span class="placeholder" data-placeholder="Password"></span>
-            </div>
-            <div class="col-md-12 form-group">
-              <button type="submit" value="submit" class="btn_3">
-                log in
-              </button>
-              <div class="creat_account">
-                <input type="checkbox" id="f-option" name="selector" />
-                <label for="f-option">Remember me</label>
-              </div>
-              <a class="lost_pass" href="#">Lost your password?</a>
-            </div>
-          </form>
-        </div>
-        <div class="cupon_area">
-          <div class="check_title">
-            <h2>
-              Have a coupon?
-              <a href="#">Click here to enter your code</a>
-            </h2>
-          </div>
-          <input type="text" placeholder="Enter coupon code" />
-          <a class="tp_btn" href="#">Apply Coupon</a>
-        </div>
+      <div class="container">         
         <div class="billing_details">
           <div class="row">
             <div class="col-lg-8">
-              <h3>Billing Details</h3>
+              <h3>Detalhes de Faturação</h3>
               <form class="row contact_form" action="#" method="post" novalidate="novalidate">
                 <div class="col-md-6 form-group p_star">
-                  <input type="text" class="form-control" id="first" name="name" />
-                  <span class="placeholder" data-placeholder="First name"></span>
+                  <input type="text" class="form-control" id="firstname" name="name" />
+                  <span class="placeholder" data-placeholder="Primeiro Nome"></span>
                 </div>
                 <div class="col-md-6 form-group p_star">
-                  <input type="text" class="form-control" id="last" name="name" />
-                  <span class="placeholder" data-placeholder="Last name"></span>
-                </div>
-                <div class="col-md-12 form-group">
-                  <input type="text" class="form-control" id="company" name="company" placeholder="Company name" />
+                  <input type="text" class="form-control" id="lastname" name="name" />
+                  <span class="placeholder" data-placeholder="Ultimo Nome"></span>
                 </div>
                 <div class="col-md-6 form-group p_star">
-                  <input type="text" class="form-control" id="number" name="number" />
-                  <span class="placeholder" data-placeholder="Phone number"></span>
+                  <input type="text" class="form-control" id="telephone" name="telephone" />
+                  <span class="placeholder" data-placeholder="Telemóvel"></span>
                 </div>
                 <div class="col-md-6 form-group p_star">
-                  <input type="text" class="form-control" id="email" name="compemailany" />
-                  <span class="placeholder" data-placeholder="Email Address"></span>
+                  <input type="text" class="form-control" id="email" name="email" />
+                  <span class="placeholder" data-placeholder="Email"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
                   <select class="country_select">
@@ -122,16 +77,12 @@
                   </select>
                 </div>
                 <div class="col-md-12 form-group p_star">
-                  <input type="text" class="form-control" id="add1" name="add1" />
-                  <span class="placeholder" data-placeholder="Address line 01"></span>
-                </div>
-                <div class="col-md-12 form-group p_star">
-                  <input type="text" class="form-control" id="add2" name="add2" />
-                  <span class="placeholder" data-placeholder="Address line 02"></span>
+                  <input type="text" class="form-control" id="address1" name="address1" />
+                  <span class="placeholder" data-placeholder="Morada 01"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
                   <input type="text" class="form-control" id="city" name="city" />
-                  <span class="placeholder" data-placeholder="Town/City"></span>
+                  <span class="placeholder" data-placeholder="Cidade"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
                   <select class="country_select">
@@ -140,97 +91,95 @@
                     <option value="4">District</option>
                   </select>
                 </div>
-                <div class="col-md-12 form-group">
-                  <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" />
-                </div>
-                <div class="col-md-12 form-group">
-                  <div class="creat_account">
-                    <input type="checkbox" id="f-option2" name="selector" />
-                    <label for="f-option2">Create an account?</label>
-                  </div>
-                </div>
-                <div class="col-md-12 form-group">
-                  <div class="creat_account">
-                    <h3>Shipping Details</h3>
-                    <input type="checkbox" id="f-option3" name="selector" />
-                    <label for="f-option3">Ship to a different address?</label>
-                  </div>
-                  <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes"></textarea>
+                <div class="col-md-12 form-group p_star">
+                  <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Código-Postal" />
                 </div>
               </form>
             </div>
             <div class="col-lg-4">
               <div class="order_box">
-                <h2>Your Order</h2>
-                <ul class="list">
-                  <li>
-                    <a href="#">Product
-                      <span>Total</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Fresh Blackberry
-                      <span class="middle">x 02</span>
-                      <span class="last">$720.00</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Fresh Tomatoes
-                      <span class="middle">x 02</span>
-                      <span class="last">$720.00</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Fresh Brocoli
-                      <span class="middle">x 02</span>
-                      <span class="last">$720.00</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="list list_2">
-                  <li>
-                    <a href="#">Subtotal
-                      <span>$2160.00</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Shipping
-                      <span>Flat rate: $50.00</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Total
-                      <span>$2210.00</span>
-                    </a>
-                  </li>
-                </ul>
+                <h2>Meu Pedido</h2>
+                <?php  
+                  echo '
+                    <ul class="list">
+                      <li>
+                        <a href="#">Product
+                          <span>Total</span>
+                        </a>
+                      </li>
+                    
+                    ';
+            
+                    $total = 0;
+                    foreach ($_SESSION['cart'] as $id => $qtd) {
+                      $sql   = "SELECT *  FROM products WHERE id= '$id'";
+                      $qr = $conexao->query($sql);
+                      if ($qr->num_rows > 0) {
+                        $ln = $qr->fetch_assoc();
+                        $name  = $ln['name'];
+                        $price = $ln['price'];
+                        $sub   = $ln['price'] * $qtd;
+                        $total += (float) $sub;
+                        echo '
+                              <li>
+                                <a href="#">' . $name . '
+                                  <span class="middle">x ' . $qtd . ' </span>
+                                  <span class="last">' . $sub . '</span>
+                                </a>
+                              </li>
+                              ';
+                      }
+                    }
+                  
+                  echo '</ul>';
+            
+                  echo '
+                      <ul class="list list_2">
+                          <li>
+                            <a href="#">Subtotal
+                              <span>'. $total.'</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Shipping
+                              <span>Flat rate: $50.00</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Total
+                              <span>'. $total.'</span>
+                            </a>
+                          </li>
+                        </ul>
+                      ';
+                ?>
+
+                <h3><br> Tipos de Pagamento</h3>
                 <div class="payment_item">
                   <div class="radion_btn">
                     <input type="radio" id="f-option5" name="selector" />
-                    <label for="f-option5">Check payments</label>
+                    <label for="f-option5">Multimanco</label>
                     <div class="check"></div>
                   </div>
-                  <p>
-                    Please send a check to Store Name, Store Street, Store Town,
-                    Store State / County, Store Postcode.
-                  </p>
                 </div>
-                <div class="payment_item active">
+                <div class="payment_item">
+                  <div class="radion_btn">
+                    <input type="radio" id="f-option6" name="selector" />
+                    <label for="f-option6">Cartão de Crédito </label>
+                    <div class="check"></div>
+                  </div>
+                </div>
+                <div class="payment_item">
                   <div class="radion_btn">
                     <input type="radio" id="f-option6" name="selector" />
                     <label for="f-option6">Paypal </label>
-                    <img src="img/product/single-product/card.jpg" alt="" />
                     <div class="check"></div>
                   </div>
-                  <p>
-                    Please send a check to Store Name, Store Street, Store Town,
-                    Store State / County, Store Postcode.
-                  </p>
                 </div>
                 <div class="creat_account">
-                  <input type="checkbox" id="f-option4" name="selector" />
+                  <input type="checkbox" id="f-option4" name="selector" required/>
                   <label for="f-option4">I’ve read and accept the </label>
-                  <a href="#">terms & conditions*</a>
+                  <a href="TermosCondições.php">terms & conditions*</a>
                 </div>
                 <a class="btn_3" href="#">Proceed to Paypal</a>
               </div>
