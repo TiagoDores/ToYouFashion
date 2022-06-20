@@ -57,6 +57,7 @@
                 <table class="table">  
                     <thead>
                     <tr>
+                      <th>Imagem</th>
                       <th>Produto</th>
                       <th>Quantidade</th>
                       <th>Preço</th>
@@ -81,24 +82,26 @@
                   $qr = $conexao->query($sql);
                   if ($qr->num_rows > 0) {
                     $ln = $qr->fetch_assoc();
+                    $image = $ln['image'];
                     $name  = $ln['name'];
                     $price = $ln['price'];
                     $sub   = $ln['price'] * $qtd;
                     $total += (float) $sub;
                     echo '
-                      <tr>       
+                      <tr>    
+                        <td><img src="img/products/' . $image . '" width=" 60px" maxheight=" 100px"></td>   
                         <td>' . $name . '</td>
                         <td><input type="number" size="3" name="prod[' . $id . ']" value="' . $qtd . '" /></td>
                         <td>' . $price . '€ </td>
                         <td>' . $sub . ' € </td>
                         <td><a class="btn btn-danger" onClick=\'javascript: return confirm ("Tem a certeza que deseja eliminar o producto?");\' 
-                        href="?action=del&id=' . $id . '" style="border-radius: 10px; padding: 15px;"><i class="fas fa-trash"></i></a></td>
+                          href="?action=del&id=' . $id . '" style="border-radius: 10px; padding: 15px;"><i class="fas fa-trash"></i></a></td>
                       </tr>';
                   }
                 }
               }
               echo '<tr>                         
-                        <td colspan="3">Total</td>
+                        <td colspan="4">Total</td>
                         <td>' . $total . ' €</td>
                       </tr>';
         

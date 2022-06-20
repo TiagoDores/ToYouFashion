@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Bootstrap icons-->
-        <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="assets/css/styles_product.css" rel="stylesheet" />
 
 </head>
@@ -38,18 +38,18 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                     <?php
+                    <?php
 
-                        include('config.php');
-                        $id = $_GET['id'];
-                        $sql = "SELECT * FROM `products` WHERE id = '$id'";
-                        $resultado = $conexao->query($sql);
+                    include('config.php');
+                    $id = $_GET['id'];
+                    $sql = "SELECT * FROM `products` WHERE id = '$id'";
+                    $resultado = $conexao->query($sql);
 
-                        if ($resultado->num_rows > 0) {
-                            $produto = $resultado->fetch_assoc();
-                        }
+                    if ($resultado->num_rows > 0) {
+                        $produto = $resultado->fetch_assoc();
+                    }
 
-                        echo '
+                    echo '
                         <div class="col-md-6">
                             <img class="card-img-top mb-5 mb-md-0" src="img/products/' . $produto['image'] . '" alt="#" />
                         </div> 
@@ -68,38 +68,66 @@
                                     </div>
                                     <button class="btn hero-btn flex-shrink-0" type="button">
                                             <i class="bi-cart-fill me-1"></i>
-                                            Adicionar <br >ao Carrinho
+                                            <a href="configcarrinho.php?action=add&id=' . $produto['id'] . '" style="color: #000;"><span>Adicionar <br >ao Carrinho</span></a>
                                     </button>
                                 </div>
                             </div>
                         </div>';
 
-                        $conexao->close();
+                    $conexao->close();
 
                     ?>
-                    
+
                 </div>
             </div>
         </section>
         <!--================End Single Product Area =================-->
-        <!-- subscribe part here -->
-        <section class="subscribe_part section_padding">
+
+        <!--? Popular Items Start -->
+        <div class="popular-items section-padding30">
             <div class="container">
+                <!-- Section tittle -->
+                <div class="row">
+                <?php
+                        include('config.php');
+                        $sql = "SELECT * FROM products WHERE NOT id = '$id' ORDER BY RAND() LIMIT 4";
+                        $resultado = $conexao->query($sql);
+
+                        if ($resultado->num_rows > 0) {
+                            while ($a = $resultado->fetch_assoc()) {
+                                echo '
+                                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
+                                        <div class="single-popular-items mb-50 text-center">
+                                            <div class="popular-img">
+                                                <img src="img/products/' . $a['image'] . '">
+                                                <div class="img-cap">
+                                                    <a href="configcarrinho.php?action=add&id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
+                                                </div>
+                                                <div class="favorit-items">
+                                                    <span class="flaticon-heart"></span>
+                                                </div>
+                                            </div>
+                                            <div class="popular-caption">
+                                                <h3><a href="formProduct_details.php?id=' . $a['id'] . '">' . $a['name'] . '</a></h3>
+                                                <span>' . $a['price'] . ' €</span>
+                                            </div>   
+                                        </div>
+                                    </div>';
+                            }
+                        }
+                        $conexao->close();
+                    ?>
+                </div>
+                <!-- Button -->
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="subscribe_part_content">
-                            <h2>Get promotions & updates!</h2>
-                            <p>Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources credibly innovate granular internal .</p>
-                            <div class="subscribe_form">
-                                <input type="email" placeholder="Enter your mail">
-                                <a href="#" class="btn_1">Subscribe</a>
-                            </div>
-                        </div>
+                    <div class="room-btn pt-70">
+                        <a href="formLoja.php" class="btn view-btn1">Ver Mais Produtos</a>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- subscribe part end -->
+        </div>
+        <!-- Popular Items End -->
+
     </main>
     <?php
     include('Footer.php');

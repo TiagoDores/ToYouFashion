@@ -53,7 +53,7 @@
 										echo '<li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">'. count($_SESSION["cart"]) . '</span></i></a> </li>';
 									} else {
 
-										echo '<li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth">0</span></i></a> </li>';
+										echo '<li><a href="formCart.php"><i class="flaticon-shopping-cart"><span class="badge badge-ligth"></span></i></a> </li>';
 									}
 
 

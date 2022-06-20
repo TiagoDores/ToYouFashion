@@ -103,7 +103,7 @@
                                             <div class="popular-img">
                                                 <img src="img/products/' . $a['image'] . '">
                                                 <div class="img-cap">
-                                                    <a href="formCart.php?id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
+                                                    <a href="configcarrinho.php?action=add&id=' . $a['id'] . '"><span>Adicionar ao Carrinho</span></a>
                                                 </div>
                                                 <div class="favorit-items">
                                                     <span class="flaticon-heart"></span>

@@ -49,10 +49,9 @@
                             <div class="footer-tittle">
                                 <h4>Produtos Novos</h4>
                                 <ul>
-                                    <li><a href="#">Woman Cloth</a></li>
-                                    <li><a href="#">Fashion Accessories</a></li>
-                                    <li><a href="#">Man Accessories</a></li>
-                                    <li><a href="#">Rubber made Toys</a></li>
+                                    <li><a href="#">Mulher</a></li>
+                                    <li><a href="#">Homem</a></li>
+                                    <li><a href="#">Acessorios de Moda</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -65,7 +64,7 @@
                                     <!--<li><a href="#">Perguntas Frequentes</a></li>-->
                                     <li><a href="TermosCondições.php">Termos &amp; condições</a></li>
                                     <li><a href="PoliticaPrivacidade.php">Politica de Privacidade</a></li>
-                                    <li><a href="formContacto.php">Reportar um Problema de Pagamentos</a></li>
+                                    <li><a href="https://www.livroreclamacoes.pt/Inicio/">Livro de Reclamações</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -32,29 +32,6 @@ CREATE TABLE `products` (
     `image` text NOT NULL
 );
 
-CREATE TABLE `images` (
-	`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `image` text NOT NULL,
-    `idproduct` int NOT NULL,
-    FOREIGN KEY (idproduct) REFERENCES products(id)
-);
-
-CREATE TABLE `productsize` (
-	`idsize` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `idproduct` int NOT NULL,
-    `size` varchar(10) NOT NULL,
-    `Stock` int NOT NULL,
-    FOREIGN KEY (idproduct) REFERENCES products(id)
-);
-
-CREATE TABLE `produtoimagens` (
-	`idproduct` int NOT NULL,
-	`idimage` int NOT NULL,
-    PRIMARY KEY(idproduct, idimage),
-    FOREIGN KEY (idproduct) REFERENCES products(id),
-    FOREIGN KEY (idimage) REFERENCES images(id)
-);
-
 CREATE TABLE `orders` (
 	`id` int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`iduser` int(11) NOT NULL,

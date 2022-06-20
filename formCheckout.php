@@ -47,7 +47,7 @@
     </div>
     <!--================Checkout Area =================-->
     <section class="checkout_area section_padding">
-      <div class="container">         
+      <div class="container">
         <div class="billing_details">
           <div class="row">
             <div class="col-lg-8">
@@ -70,37 +70,56 @@
                   <span class="placeholder" data-placeholder="Email"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
-                  <select class="country_select">
-                    <option value="1">Country</option>
-                    <option value="2">Country</option>
-                    <option value="4">Country</option>
-                  </select>
+                  <input type="text" class="form-control" id="country" name="country" />
+                  <span class="placeholder" data-placeholder="País"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
-                  <input type="text" class="form-control" id="address1" name="address1" />
-                  <span class="placeholder" data-placeholder="Morada 01"></span>
+                  <input type="text" class="form-control" id="address" name="address" />
+                  <span class="placeholder" data-placeholder="Morada"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
                   <input type="text" class="form-control" id="city" name="city" />
                   <span class="placeholder" data-placeholder="Cidade"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
-                  <select class="country_select">
-                    <option value="1">District</option>
-                    <option value="2">District</option>
-                    <option value="4">District</option>
-                  </select>
+                  <input type="text" class="form-control" id="District" name="District" />
+                  <span class="placeholder" data-placeholder="Distrito"></span>
                 </div>
                 <div class="col-md-12 form-group p_star">
                   <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Código-Postal" />
                 </div>
               </form>
+
+              <h3><br> Tipos de Pagamento</h3>
+              <div class="payment_item">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option5" name="selector" />
+                  <label for="f-option5">Multimanco</label>
+                  <div class="check"></div>
+                </div>
+              </div>
+              <div class="payment_item">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option6" name="selector" />
+                  <label for="f-option6">Cartão de Credito</label>
+                  <div class="check"></div>
+                </div>
+              </div>
+              
+              <div class="payment_item active">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option7" name="selector" />
+                  <label for="f-option7">PayPal</label>
+                  <div class="check"></div>
+                </div>
+              </div>
             </div>
+
             <div class="col-lg-4">
               <div class="order_box">
                 <h2>Meu Pedido</h2>
-                <?php  
-                  echo '
+                <?php
+                echo '
                     <ul class="list">
                       <li>
                         <a href="#">Product
@@ -109,79 +128,57 @@
                       </li>
                     
                     ';
-            
-                    $total = 0;
-                    foreach ($_SESSION['cart'] as $id => $qtd) {
-                      $sql   = "SELECT *  FROM products WHERE id= '$id'";
-                      $qr = $conexao->query($sql);
-                      if ($qr->num_rows > 0) {
-                        $ln = $qr->fetch_assoc();
-                        $name  = $ln['name'];
-                        $price = $ln['price'];
-                        $sub   = $ln['price'] * $qtd;
-                        $total += (float) $sub;
-                        echo '
+
+                $total = 0;
+                foreach ($_SESSION['cart'] as $id => $qtd) {
+                  $sql   = "SELECT *  FROM products WHERE id= '$id'";
+                  $qr = $conexao->query($sql);
+                  if ($qr->num_rows > 0) {
+                    $ln = $qr->fetch_assoc();
+                    $name  = $ln['name'];
+                    $price = $ln['price'];
+                    $sub   = $ln['price'] * $qtd;
+                    $total += (float) $sub;
+                    echo '
                               <li>
                                 <a href="#">' . $name . '
-                                  <span class="middle">x ' . $qtd . ' </span>
-                                  <span class="last">' . $sub . '</span>
+                                  <span class="middle" >x ' . $qtd . ' </span>
+                                  <span class="last">' . $sub . ' €</span>
                                 </a>
                               </li>
                               ';
-                      }
-                    }
-                  
-                  echo '</ul>';
-            
-                  echo '
+                  }
+                }
+
+                echo '</ul>';
+
+                echo '
                       <ul class="list list_2">
                           <li>
                             <a href="#">Subtotal
-                              <span>'. $total.'</span>
+                              <span>' . $total . ' €</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#">Shipping
-                              <span>Flat rate: $50.00</span>
+                            <a href="#">Envio
+                              <span>5€</span>
                             </a>
                           </li>
                           <li>
                             <a href="#">Total
-                              <span>'. $total.'</span>
+                              <span>' . ($total + 5) . ' €</span>
                             </a>
                           </li>
                         </ul>
                       ';
                 ?>
 
-                <h3><br> Tipos de Pagamento</h3>
-                <div class="payment_item">
-                  <div class="radion_btn">
-                    <input type="radio" id="f-option5" name="selector" />
-                    <label for="f-option5">Multimanco</label>
-                    <div class="check"></div>
-                  </div>
-                </div>
-                <div class="payment_item">
-                  <div class="radion_btn">
-                    <input type="radio" id="f-option6" name="selector" />
-                    <label for="f-option6">Cartão de Crédito </label>
-                    <div class="check"></div>
-                  </div>
-                </div>
-                <div class="payment_item">
-                  <div class="radion_btn">
-                    <input type="radio" id="f-option6" name="selector" />
-                    <label for="f-option6">Paypal </label>
-                    <div class="check"></div>
-                  </div>
-                </div>
                 <div class="creat_account">
-                  <input type="checkbox" id="f-option4" name="selector" required/>
-                  <label for="f-option4">I’ve read and accept the </label>
-                  <a href="TermosCondições.php">terms & conditions*</a>
+                  <input type="checkbox" id="f-option4" name="selector" required />
+                  <label for="f-option4">Eu li e aceito os </label>
+                  <a href="TermosCondições.php">Termos & Condições</a>
                 </div>
-                <a class="btn_3" href="#">Proceed to Paypal</a>
+                <a class="btn_3" href="Encomendar.php">Encomendar</a>
               </div>
             </div>
           </div>
